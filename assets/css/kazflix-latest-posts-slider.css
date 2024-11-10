@@ -21,22 +21,44 @@
     white-space: nowrap;
 }
 
-/* Common Styles for Large and Small Post Cards */
-.kazflix-large-post, .kazflix-small-post {
+/* Main Container for Individual Post Cards */
+.kazflix-post-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc((100vw - 76px) / 3.1);
+    height: calc(((((100vw - 76px) / 3.1) - 4px) * 0.5617977528089888) + 4px);
+    flex-direction: column;
+}
+
+/* Post Card Styles (Adaptive) */
+.kazflix-post-card {
+    flex: 1 1 auto;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
     border: 2px solid #000000;
     transition: border-color 0.3s ease;
+    width: 100%;
+    height: 100%;
 }
 
-.kazflix-large-post:hover, .kazflix-small-post:hover {
+.kazflix-post-card:hover {
     border-color: #6842FF;
 }
 
+/* Small Post Group as 2x2 Grid */
+.kazflix-small-post-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+    width: 100%;
+    height: 100%;
+}
+
 /* Image Styles */
-.kazflix-large-post .kazflix-post-thumbnail img,
-.kazflix-small-post .kazflix-post-thumbnail img {
+.kazflix-post-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -44,9 +66,8 @@
     border-radius: 8px;
 }
 
-/* Title and Description Overlay for Both Large and Small Posts */
-.kazflix-large-post .kazflix-post-content,
-.kazflix-small-post .kazflix-post-content {
+/* Title and Description Overlay for Post Card */
+.kazflix-post-content {
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -59,116 +80,66 @@
     transition: opacity 0.3s ease;
 }
 
-.kazflix-large-post:hover .kazflix-post-content,
-.kazflix-small-post:hover .kazflix-post-content {
+.kazflix-post-card:hover .kazflix-post-content {
     opacity: 1;
 }
 
 /* Title and Description Styles */
-.kazflix-large-post .kazflix-post-title,
-.kazflix-small-post .kazflix-post-title {
+.kazflix-post-title {
     font-weight: bold;
     margin: 0;
     overflow: hidden;
     white-space: normal;
     text-overflow: ellipsis;
-}
-
-.kazflix-large-post .kazflix-post-title {
-    font-size: 18px;
-}
-
-.kazflix-small-post .kazflix-post-title {
-    font-size: 14px;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
-.kazflix-large-post .kazflix-post-description,
-.kazflix-small-post .kazflix-post-description {
-    font-size: 14px;
+.kazflix-post-description {
+    font-size: 12px;
     margin: 5px 0 0;
     line-height: 1.4;
     overflow: hidden;
     white-space: normal;
     display: -webkit-box;
-}
-
-.kazflix-large-post .kazflix-post-description {
-    -webkit-line-clamp: 3;
-}
-
-.kazflix-small-post .kazflix-post-description {
-    font-size: 12px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
-/* Large Post Card Dimensions */
-.kazflix-large-post {
-    flex: 0 0 calc((100vw - 216px) / 3.6);
-    height: calc(((((100vw - 216px) / 3.6) - 4px) * 0.5617977528089888) + 4px);
-}
-
-/* Small Post Group Container as 2x2 Grid */
-.kazflix-small-post-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
-    flex: 0 0 calc((100vw - 216px) / 3.6);
-    height: calc(((((100vw - 216px) / 3.6) - 4px) * 0.5617977528089888) + 4px);
-}
-
-/* Responsive Breakpoints */
-
-/* Adjustments for 1200px screens */
-@media (max-width: 1200px) {
-    .kazflix-large-post, .kazflix-small-post-group, .kazflix-small-post {
-        flex: 0 0 calc((100vw - 96px) / 3);
+/* Responsive Adjustments */
+@media (min-width: 1200px) {
+    .kazflix-post-card-container {
+        width: calc((100vw - 76px) / 3.1);
+        height: calc(((((100vw - 76px) / 3.1) - 4px) * 0.5617977528089888) + 4px);
     }
 }
 
-/* Adjustments for 1000px screens */
-@media (max-width: 1000px) {
-    .kazflix-large-post, .kazflix-small-post-group, .kazflix-small-post {
-        flex: 0 0 calc((100vw - 72px) / 2.5);
-        
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .kazflix-post-card-container {
+        width: calc((100vw - 76px) / 2.6);
+        height: calc(((((100vw - 76px) / 2.6) - 4px) * 0.5617977528089888) + 4px);
     }
 }
 
-/* Adjustments for 800px screens */
-@media (max-width: 800px) {
-    .kazflix-large-post, .kazflix-small-post-group, .kazflix-small-post {
-        flex: 0 0 calc(100vw / 2);
-        height: calc((100vw / 2 - 8px) * 0.5618);
+@media (min-width: 800px) and (max-width: 999px) {
+    .kazflix-post-card-container {
+        width: calc((100vw - 76px) / 2.1);
+        height: calc((((100vw - 76px) / 2.1 - 4px) * 0.5617977528089888) + 4px);
     }
 }
 
-/* Adjustments for 600px screens */
-@media (max-width: 600px) {
-    .kazflix-large-post, .kazflix-small-post-group, .kazflix-small-post {
-        flex: 0 0 100%;
-        height: auto;
+
+@media (min-width: 600px) and (max-width: 799px) {
+    .kazflix-post-card-container {
+        width: calc((100vw - 76px) / 1.6);
+        height: calc((((100vw - 76px) / 1.6 - 4px) * 0.5617977528089888) + 4px);
     }
 }
 
-/* Adjustments for small screens (0px to 400px) */
-@media (max-width: 400px) {
-    .kazflix-scroll-wrapper {
-        padding: 5px 0;
-    }
-    
-    .kazflix-large-post, .kazflix-small-post-group, .kazflix-small-post {
-        flex: 0 0 100%;
-        height: auto;
-    }
-    
-    .kazflix-large-post .kazflix-post-title, .kazflix-small-post .kazflix-post-title {
-        font-size: 16px;
-    }
-    
-    .kazflix-large-post .kazflix-post-description, .kazflix-small-post .kazflix-post-description {
-        font-size: 12px;
+@media (max-width: 599px) {
+    .kazflix-post-card-container {
+        width: calc((100vw - 76px) / 1.1);
+        height: calc((((100vw - 76px) / 1.1 - 4px) * 0.5617977528089888) + 4px);
     }
 }

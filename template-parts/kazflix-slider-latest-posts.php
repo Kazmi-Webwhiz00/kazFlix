@@ -23,27 +23,30 @@ if ( $query->have_posts() ) : ?>
             while ( $query->have_posts() ) : $query->the_post(); ?>
                 
                 <?php if ($post_index % 5 === 0): ?>
-                    <!-- Large Post Card -->
-                    <div class="kazflix-large-post">
-                        <a href="<?php echo esc_url( get_permalink() ); ?>" class="kazflix-post-thumbnail">
-                            <?php if ( has_post_thumbnail() ) : ?>
-                                <?php the_post_thumbnail( 'large' ); ?>
-                            <?php endif; ?>
-                        </a>
-                        <div class="kazflix-post-content">
-                            <h2 class="kazflix-post-title"><?php the_title(); ?></h2>
-                            <p class="kazflix-post-description"><?php echo wp_trim_words(get_the_excerpt(), 25); // Limit to 150 characters ?></p>
+                    <!-- Single Large Post -->
+                    <div class="kazflix-post-card-container">
+                        <div class="kazflix-post-card">
+                            <a href="<?php echo esc_url( get_permalink() ); ?>" class="kazflix-post-thumbnail">
+                                <?php if ( has_post_thumbnail() ) : ?>
+                                    <?php the_post_thumbnail( 'large' ); ?>
+                                <?php endif; ?>
+                            </a>
+                            <div class="kazflix-post-content">
+                                <h2 class="kazflix-post-title"><?php the_title(); ?></h2>
+                                <p class="kazflix-post-description"><?php echo wp_trim_words(get_the_excerpt(), 25); ?></p>
+                            </div>
                         </div>
                     </div>
                 
-                <?php else: ?>
-                    <?php if ($post_index % 5 === 1): ?>
-                        <!-- Start Small Post Group -->
+                <?php elseif ($post_index % 5 === 1): ?>
+                    <!-- Group of Four Posts -->
+                    <div class="kazflix-post-card-container">
                         <div class="kazflix-small-post-group">
-                    <?php endif; ?>
-                    
-                    <!-- Small Post Card -->
-                    <div class="kazflix-small-post">
+                <?php endif; ?>
+
+                <?php if ($post_index % 5 > 0 && $post_index % 5 < 5): ?>
+                    <!-- Post Card within Small Group -->
+                    <div class="kazflix-post-card">
                         <a href="<?php echo esc_url( get_permalink() ); ?>" class="kazflix-post-thumbnail">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <?php the_post_thumbnail( 'medium' ); ?>
@@ -51,15 +54,15 @@ if ( $query->have_posts() ) : ?>
                         </a>
                         <div class="kazflix-post-content">
                             <h3 class="kazflix-post-title"><?php the_title(); ?></h3>
-                            <p class="kazflix-post-description"><?php echo wp_trim_words(get_the_excerpt(), 25); // Limit to 150 characters ?></p>
+                            <p class="kazflix-post-description"><?php echo wp_trim_words(get_the_excerpt(), 25); ?></p>
                         </div>
                     </div>
-                    
-                    <?php if ($post_index % 5 === 4): ?>
+                <?php endif; ?>
+
+                <?php if ($post_index % 5 === 4): ?>
                         <!-- End Small Post Group -->
                         </div>
-                    <?php endif; ?>
-                
+                    </div>
                 <?php endif; ?>
 
                 <?php $post_index++; ?>
@@ -70,5 +73,3 @@ if ( $query->have_posts() ) : ?>
 <?php else : ?>
     <p><?php esc_html_e( 'No posts found.', 'kazflix' ); ?></p>
 <?php endif; ?>
-
-
