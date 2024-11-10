@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-<header class="kazflix-site-header">
+<!-- <header class="kazflix-site-header">
     <div class="kazflix-header-left">
         <button class="kazflix-menu-icon">
             <span></span>
@@ -31,4 +31,4 @@
         <button class="kazflix-icon-button"><i class="kazflix-icon-heart"></i></button>
         <button class="kazflix-login-button">Log in</button>
     </div>
-</header>
+</header> -->

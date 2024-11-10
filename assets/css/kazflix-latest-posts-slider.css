@@ -3,21 +3,32 @@
     overflow-x: auto;
     padding: 10px 0;
     white-space: nowrap;
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
 .kazflix-scroll-wrapper::-webkit-scrollbar {
-    height: 8px;
+    display: none; /* Chrome, Safari, Opera */
 }
 
-.kazflix-scroll-wrapper::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
+.kazflix-titleContainer {
+    padding-left: 8px;
+    color: white;
+}
+
+.kazflix-carouselTitle {
+    align-self: flex-end;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* Horizontal Layout for Mixed Posts */
 .kazflix-mixed-layout-horizontal {
     display: inline-flex;
-    gap: 10px;
+    gap: 4px;
     white-space: nowrap;
 }
 
@@ -28,6 +39,15 @@
     align-items: center;
     width: calc((100vw - 76px) / 3.1);
     height: calc(((((100vw - 76px) / 3.1) - 4px) * 0.5617977528089888) + 4px);
+    flex-direction: column;
+}
+
+.kazflix-post-card-container-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc((100vw - 76px) / 7.25);
+    height: calc(((((100vw - 76px) / 7.25) - 4px) * 0.5617977528089888) + 4px);
     flex-direction: column;
 }
 
@@ -107,6 +127,7 @@
     -webkit-box-orient: vertical;
 }
 
+/* Responsive Breakpoints for kazflix-post-card-container */
 @media (min-width: 1910px) {
     .kazflix-post-card-container {
         width: calc((100vw - 216px) / 3.6);
@@ -119,12 +140,22 @@
         width: calc((100vw - 76px) / 3.6);
         height: calc((((100vw - 76px) / 3.6 - 4px) * 0.5617977528089888) + 4px);
     }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw - 76px) / 7.25);
+        height: calc(((((100vw - 76px) / 7.25) - 4px) * 0.5617977528089888) + 4px);
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1699px) {
     .kazflix-post-card-container {
         width: calc((100vw - 76px) / 3.1);
         height: calc((((100vw - 76px) / 3.1 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw - 76px) / 6.25);
+        height: calc(((((100vw - 76px) / 6.25) - 4px) * 0.5617977528089888) + 4px);
     }
 }
 
@@ -133,12 +164,22 @@
         width: calc((100vw - 76px) / 2.6);
         height: calc((((100vw - 76px) / 2.6 - 4px) * 0.5617977528089888) + 4px);
     }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw - 76px) / 5.25);
+        height: calc(((((100vw - 76px) / 5.25) - 4px) * 0.5617977528089888) + 4px);
+    }
 }
 
 @media (min-width: 800px) and (max-width: 999px) {
     .kazflix-post-card-container {
         width: calc((100vw - 76px) / 2.1);
         height: calc((((100vw - 76px) / 2.1 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw - 76px) / 4.25);
+        height: calc(((((100vw - 76px) / 4.25) - 4px) * 0.5617977528089888) + 4px);
     }
 }
 
@@ -147,11 +188,21 @@
         width: calc((100vw - 76px) / 1.6);
         height: calc((((100vw - 76px) / 1.6 - 4px) * 0.5617977528089888) + 4px);
     }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw - 76px) / 3.25);
+        height: calc(((((100vw - 76px) / 3.25) - 4px) * 0.5617977528089888) + 4px);
+    }
 }
 
 @media (max-width: 599px) {
     .kazflix-post-card-container {
         width: calc((100vw - 76px) / 1.1);
         height: calc((((100vw - 76px) / 1.1 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw - 76px) / 2.25);
+        height: calc(((((100vw - 76px) / 2.25) - 4px) * 0.5617977528089888) + 4px);
     }
 }
