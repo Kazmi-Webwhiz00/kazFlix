@@ -1,0 +1,101 @@
+.kazflix-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Scroll Button Styles */
+.kazflix-scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.664);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: none; /* Hide buttons initially */
+    transition: opacity 0.3s;
+    height: 84%;
+    width: 76px;
+
+}
+
+.kazflix-scroll-button:hover{
+    background-color: rgba(0, 0, 0, 0.76) !important;
+}
+/* Position Left and Right Scroll Buttons */
+.kazflix-scroll-left {
+    left: 10px;
+}
+
+.kazflix-scroll-right {
+    right: 10px;
+}
+
+/* Show Buttons on Hover */
+.kazflix-slider-wrapper:hover .kazflix-scroll-button {
+    display: block;
+}
+
+/* Horizontal Scroll Container */
+.kazflix-horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.kazflix-horizontal-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+.kazflix-horizontal-scroll-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Scrollable Post Item */
+.kazflix-scroll-post {
+    flex: 0 0 auto;
+    width: 200px;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-color: #2c2c3c;
+    transition: transform 0.3s;
+}
+
+.kazflix-scroll-post:hover {
+    transform: scale(1.05);
+}
+
+/* Thumbnail Link (Image) */
+.kazflix-scroll-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Overlay with Title */
+.kazflix-scroll-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+}
+
+.kazflix-scroll-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}

@@ -9,3 +9,12 @@ Version: 1.0.0
 */
 
 /* Add your custom CSS below this line */
+
+/* Testing style */
+body {
+    background-color: #0c0d14 !important;
+}
+
+.kazflix-home-main {
+    padding: 10px 0px;
+}
