@@ -16,6 +16,7 @@ get_header(); // Load the header
     <!-- Main Content Area with Post Loop -->
     <?php get_template_part( 'template-parts/kazflix-slider-latest-posts', 'home' ); ?>
 
+    <?php get_template_part( 'template-parts/kazflix-slider-category-posts', 'home' ); ?>
 </main>
 
 <?php
