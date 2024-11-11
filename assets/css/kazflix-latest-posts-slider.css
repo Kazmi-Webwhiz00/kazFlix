@@ -206,3 +206,48 @@
         height: calc(((((100vw - 76px) / 2.25) - 4px) * 0.5617977528089888) + 4px);
     }
 }
+
+
+.kazflix-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.kazflix-scroll-wrapper {
+    overflow-x: auto;
+    padding: 10px 0;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.kazflix-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.kazflix-scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.kazflix-scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-button {
+    left: 10px;
+}
+
+.right-button {
+    right: 10px;
+}

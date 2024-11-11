@@ -1,104 +1,223 @@
-/* Header container */
+/* Basic styling for the header */
 .kazflix-site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #1f1f2e !important;
+    background-color: #1F2030;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for sticky header */
 }
 
-/* Left section: Menu Icon and Logo */
-.kazflix-header-left {
+.kazflix-header-left,
+.kazflix-header-center,
+.kazflix-header-right {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-.kazflix-menu-icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    margin-right: 15px;
-}
-
-.kazflix-menu-icon span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
+/* Logo styling */
 .kazflix-site-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 .kazflix-site-logo img {
-    width: 30px;
-    margin-right: 10px;
+    max-width: 45px;
+    margin-right: 8px;
 }
 
 .kazflix-site-logo span {
-    font-size: 18px;
     font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
 }
 
-/* Center section: Search Bar */
-.kazflix-header-center {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.kazflix-search-bar {
-    width: 60%;
-    max-width: 400px;
-    padding: 8px 12px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    background-color: #2c2c3c;
-    color: white;
-}
-
-.kazflix-search-bar::placeholder {
-    color: #aaa;
-}
-
-/* Right section: Icon buttons and Login Button */
-.kazflix-header-right {
-    display: flex;
+/* Menu icon styling */
+.kazflix-menu-icon {
+    display: inline-flex;
     align-items: center;
-}
-
-.kazflix-icon-button {
-    width: 36px;
-    height: 36px;
-    margin: 0 5px;
-    background-color: #2c2c3c;
-    border: none;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
     border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.kazflix-menu-icon:hover {
+    background-color: #3a3a5c;
+}
+
+/* Search bar styling */
+.kazflix-search-bar-container {
+    gap: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    cursor: pointer;
-}
-
-.kazflix-icon-button i {
-    font-size: 18px;
-}
-
-.kazflix-login-button {
-    background-color: #6b4eff;
-    color: white;
-    padding: 8px 16px;
-    border: none;
+    padding: 5px 20px;
+    border: 2px solid #2e2e4e; /* Dark border color */
     border-radius: 20px;
-    font-weight: bold;
+    background-color: #2e2e4e;
+    color: #dcdcdc;
+    font-size: 0.9rem;
+    width: 100%;
+    min-width: 400px;
+    max-width: 500px; /* Increased width for a longer search bar */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.kazflix-search-bar-container:hover,
+.kazflix-search-bar-container:focus-within {
+    border-color: #84a9ff; /* Light blue border on hover/focus */
+    box-shadow: 0 0 8px rgba(132, 169, 255, 0.247); /* Enhanced shadow on focus */
+}
+
+/* Input field styling inside the search bar */
+.kazflix-search-bar-container > input {
+    border: 0px !important;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    outline: none;
+    height: 25px; /* Reduced height of input */
+}
+
+/* White placeholder color */
+.kazflix-search-bar-container > input::placeholder {
+    color: #fff; /* White placeholder color */
+}
+
+/* Right section icons styling */
+.kazflix-header-right .kazflix-icon {
+    border-radius: 30px;
+    transition: 250ms;
     cursor: pointer;
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #efeff7;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.kazflix-header-right .kazflix-icon:hover {
+    background-color: #3a3a5c;
+}
+
+/* SVG icons within buttons */
+.kazflix-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Login button styling */
+.kazflix-login-button {
+    padding: 6px 12px;
+    margin-left: 8px;
+    background-color: #6c63ff;
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.kazflix-login-button:hover {
+    background-color: #847aff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .kazflix-site-header {
+        padding: 8px 15px;
+        justify-content: space-between;
+    }
+
+    .kazflix-header-center {
+        display: none; /* Hide search bar on medium screens */
+    }
+
+    .kazflix-header-left {
+        gap: 10px;
+    }
+
+    .kazflix-header-right {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kazflix-site-logo span {
+        display: none; /* Hide logo text on small screens */
+    }
+
+    .kazflix-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Welcome section styling */
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 16px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    height: 84px;
+}
+
+.welcome-item,
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: #6842ff;
+}
+
+.welcome-text {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.feature-text {
+    font-weight: 500;
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        height: auto;
+    }
 }
