@@ -148,9 +148,38 @@
 }
 
 .kazflix-menu-icon.kazflix-mobile-search-icon{
-display: none;
+    display: none;
 }
+
 /* Responsive styling */
+
+/* 1024px breakpoint */
+@media (max-width: 1024px) {
+    .kazflix-search-bar-container {
+        max-width: 400px;
+        padding: 5px 15px;
+    }
+
+    .kazflix-site-logo span {
+        font-size: 0.9rem;
+    }
+
+    .kazflix-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .kazflix-header-right .kazflix-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .kazflix-login-button {
+        padding: 6px 10px;
+    }
+}
+
+/* 768px breakpoint */
 @media (max-width: 768px) {
     .kazflix-site-header {
         padding: 8px 15px;
@@ -171,41 +200,46 @@ display: none;
     }
 }
 
+/* 480px breakpoint */
 @media (max-width: 480px) {
     .kazflix-menu-icon.kazflix-mobile-search-icon{
         display: flex;
-        }
+    }
 
-        .kazflix-login-button span:nth-child(2) {
-            display: block;
-        }
-        .kazflix-login-button span:nth-child(1) {
-            display: none;
-        }
-        .kazflix-menu-icon {
-            display: none;
-        }
+    .kazflix-login-button span:nth-child(2) {
+        display: block;
+    }
+    .kazflix-login-button span:nth-child(1) {
+        display: none;
+    }
+    .kazflix-menu-icon {
+        display: none;
+    }
 
-        .kazflix-header-left {
-            gap: 7px;
-        }
+    .kazflix-header-left {
+        gap: 7px;
+    }
 
-        .kazflix-site-header{
-            background-color: #0c0d14;
-        }
-        .kazflix-header-right{
-            gap: 0px;
-        }
-        .kazflix-header-right .kazflix-icon{
-            background-color: #0c0d14;
-            font-weight: 600;
-            padding: 0px;
-        }
+    .kazflix-site-header {
+        background-color: #0c0d14;
+    }
+
+    .kazflix-header-right {
+        gap: 0px;
+    }
+
+    .kazflix-header-right .kazflix-icon {
+        background-color: #0c0d14;
+        font-weight: 600;
+        padding: 0px;
+    }
+
     .kazflix-icon svg {
         width: 20px;
         height: 20px;
         font-weight: 600;
     }
+
     .kazflix-login-button {
         padding: 6px 12px;
     }

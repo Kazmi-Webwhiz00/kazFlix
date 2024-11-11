@@ -12,7 +12,10 @@ $posts_per_category = 15;
 $categories = get_categories();
 
 if ( ! empty( $categories ) ) :
+    $category_count = 1; // Initialize category counter
+    
     foreach ( $categories as $category ) :
+        
         // Query for latest posts in each category
         $args = array(
             'post_type'      => 'post',
@@ -22,21 +25,26 @@ if ( ! empty( $categories ) ) :
         $query = new WP_Query( $args );
 
         if ( $query->have_posts() ) : ?>
-                        <div class="kazflix-titleContainer">
-                    <h2 class="kazflix-carouselTitle"><?php echo esc_html( $category->name ); ?></h2>
-                </div>
+            <div class="kazflix-titleContainer">
+                <span class="kazflix-carouselTitle"><?php echo esc_html( $category->name ); ?></span>
+            </div>
             <div class="kazflix-scroll-wrapper">
                 <div class="kazflix-mixed-layout-horizontal">
                     <?php
+                    // Check if it's the second category
+                    $container_class = ($category_count === 2) ? 'kazflix-post-card-container-category-short' : 'kazflix-post-card-container-category';
+                    
                     while ( $query->have_posts() ) : $query->the_post(); ?>
-                        <!-- Single Post Card -->
-                        <div class="kazflix-post-card-container-category">
-                        <?php get_template_part( 'template-parts/post-cards/content', 'post-card-1' ); ?>
+                        <!-- Single Post Card with conditional class based on category count -->
+                        <div class="<?php echo $container_class; ?>">
+                            <?php get_template_part( 'template-parts/post-cards/content', 'post-card-1' ); ?>
                         </div>
                     <?php endwhile; ?>
                 </div>
             </div>
             <?php wp_reset_postdata(); ?>
+
+            <?php $category_count++; // Increment category counter after each category ?>
         <?php endif;
     endforeach;
 else : ?>
