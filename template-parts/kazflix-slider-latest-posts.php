@@ -29,7 +29,7 @@ if ( $query->have_posts() ) : ?>
                         <!-- Single Large Post -->
                         <div class="kazflix-post-card-container">
 
-                        <?php get_template_part( 'template-parts/content', 'post-card' ); ?>
+                        <?php get_template_part( 'template-parts/post-cards/content', 'post-card-1' ); ?>
                         </div>
                     
                     <?php elseif ($post_index % 5 === 1): ?>
@@ -40,7 +40,7 @@ if ( $query->have_posts() ) : ?>
 
                     <?php if ($post_index % 5 > 0 && $post_index % 5 < 5): ?>
                         <!-- Post Card within Small Group -->
-                        <?php get_template_part( 'template-parts/content', 'post-card' ); ?>
+                        <?php get_template_part( 'template-parts/post-cards/content', 'post-card-1' ); ?>
                     <?php endif; ?>
 
                     <?php if ($post_index % 5 === 4): ?>

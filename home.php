@@ -6,7 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+    exit; // Exit if accessed directly.
 }
 
 get_header(); // Load the header
@@ -16,8 +16,14 @@ get_header(); // Load the header
     <!-- Main Content Area with Post Loop -->
     <?php get_template_part( 'template-parts/banners/kazflix-wellcome-banner', 'home' ); ?>
 
-    <?php get_template_part( 'template-parts/kazflix-slider-latest-posts', 'home' ); ?>
-
+    <?php if ( false ) : ?>
+        <!-- Load the mobile-specific slider for the latest posts -->
+        <?php get_template_part( 'template-parts/kazflix-slider-latest-posts-mobile', 'home' ); ?>
+    <?php else : ?>
+        <!-- Load the desktop-specific slider for the latest posts -->
+        <?php get_template_part( 'template-parts/kazflix-slider-latest-posts', 'home' ); ?>
+    <?php endif; ?>
+   
     <?php get_template_part( 'template-parts/kazflix-slider-category-posts', 'home' ); ?>
 </main>
 

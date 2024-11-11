@@ -31,7 +31,7 @@ if ( ! empty( $categories ) ) :
                     while ( $query->have_posts() ) : $query->the_post(); ?>
                         <!-- Single Post Card -->
                         <div class="kazflix-post-card-container-category">
-                        <?php get_template_part( 'template-parts/content', 'post-card' ); ?>
+                        <?php get_template_part( 'template-parts/post-cards/content', 'post-card-1' ); ?>
                         </div>
                     <?php endwhile; ?>
                 </div>
