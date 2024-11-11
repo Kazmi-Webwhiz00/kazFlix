@@ -1,0 +1,212 @@
+/* Basic styling for the header */
+.kazflix-site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1F2030;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for sticky header */
+    border: 1px solid #1F2030;
+}
+
+.kazflix-header-left,
+.kazflix-header-center,
+.kazflix-header-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Logo styling */
+.kazflix-site-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.kazflix-site-logo img {
+    max-width: 45px;
+    margin-right: 8px;
+}
+
+.kazflix-site-logo span {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Menu icon styling */
+.kazflix-menu-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.kazflix-menu-icon:hover {
+    background-color: #3a3a5c;
+}
+
+/* Search bar styling */
+.kazflix-search-bar-container {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    border: 2px solid #2e2e4e; /* Dark border color */
+    border-radius: 20px;
+    background-color: #2e2e4e;
+    color: #dcdcdc;
+    font-size: 0.9rem;
+    width: 100%;
+    min-width: 460px;
+    max-height: 40px;
+    max-width: 500px; /* Increased width for a longer search bar */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.kazflix-search-bar-container:hover,
+.kazflix-search-bar-container:focus-within {
+    border-color: #84a9ff; /* Light blue border on hover/focus */
+    box-shadow: 0 0 8px rgba(132, 169, 255, 0.247); /* Enhanced shadow on focus */
+}
+
+/* Input field styling inside the search bar */
+.kazflix-search-bar-container > input {
+    border: 0px !important;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    outline: none;
+    height: 25px; /* Reduced height of input */
+}
+
+/* White placeholder color */
+.kazflix-search-bar-container > input::placeholder {
+    color: #fff; /* White placeholder color */
+}
+
+/* Right section icons styling */
+.kazflix-header-right .kazflix-icon {
+    border-radius: 30px;
+    transition: 250ms;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #efeff7;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.kazflix-header-right .kazflix-icon:hover {
+    background-color: #3a3a5c;
+}
+
+/* SVG icons within buttons */
+.kazflix-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Login button styling */
+.kazflix-login-button {
+    padding: 6px 12px;
+    margin-left: 8px;
+    background-color: #6c63ff;
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.kazflix-login-button:hover {
+    background-color: #847aff;
+}
+
+.kazflix-login-button span:nth-child(2) {
+    display: none;
+}
+
+.kazflix-menu-icon.kazflix-mobile-search-icon{
+display: none;
+}
+/* Responsive styling */
+@media (max-width: 768px) {
+    .kazflix-site-header {
+        padding: 8px 15px;
+        justify-content: space-between;
+    }
+
+    .kazflix-header-center {
+        display: none; /* Hide search bar on medium screens */
+    }
+
+    .kazflix-header-left {
+        gap: 5px;
+    }
+
+    .kazflix-header-right {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kazflix-menu-icon.kazflix-mobile-search-icon{
+        display: flex;
+        }
+
+        .kazflix-login-button span:nth-child(2) {
+            display: block;
+        }
+        .kazflix-login-button span:nth-child(1) {
+            display: none;
+        }
+        .kazflix-menu-icon {
+            display: none;
+        }
+
+        .kazflix-header-left {
+            gap: 7px;
+        }
+
+        .kazflix-site-header{
+            background-color: #0c0d14;
+        }
+        .kazflix-header-right{
+            gap: 0px;
+        }
+        .kazflix-header-right .kazflix-icon{
+            background-color: #0c0d14;
+            font-weight: 600;
+            padding: 0px;
+        }
+    .kazflix-icon svg {
+        width: 20px;
+        height: 20px;
+        font-weight: 600;
+    }
+    .kazflix-login-button {
+        padding: 6px 12px;
+    }
+}

@@ -13,6 +13,8 @@ Version: 1.0.0
 /* Testing style */
 body {
     background-color: #0c0d14 !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600 !important;
 }
 
 .kazflix-home-main {
