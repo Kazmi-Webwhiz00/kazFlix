@@ -1,0 +1,96 @@
+/* Generic Scroll Container Styling */
+.kazflix-scroll-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    overflow-x: auto; /* Enables horizontal scroll */
+    scroll-behavior: smooth; /* Smooth scrolling experience */
+    white-space: nowrap; /* Keeps items on a single line */
+    padding-left: 16px; /* Adds padding to ensure first item visibility */
+    padding-right: 16px; /* Adds padding to ensure last item visibility */
+    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+}
+
+/* Kazflix-specific Welcome Section Styling */
+.kazflix-welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #0C0D14;
+    padding: 24px 24px;
+}
+
+.kazflix-welcome-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+    flex-shrink: 0; /* Prevents item from shrinking */
+}
+
+.kazflix-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    flex-shrink: 0; /* Prevents item from shrinking */
+}
+
+.kazflix-icon {
+    width: 24px;
+    height: 24px;
+    fill: #6842ff;
+}
+
+.kazflix-welcome-text {
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.kazflix-feature-text {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .kazflix-scroll-container {
+        gap: 16px;
+        padding: 12px 16px;
+    }
+
+    .kazflix-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .kazflix-welcome-text {
+        font-size: 20px;
+    }
+
+    .kazflix-feature-text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kazflix-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .kazflix-welcome-text {
+        font-size: 18px;
+    }
+
+    .kazflix-feature-text {
+        font-size: 14px;
+    }
+}

@@ -8,6 +8,7 @@ function kazflix_enqueue_styles() {
 
     // Enqueue header-specific stylesheet from assets/css directory
     wp_enqueue_style('kazflix-header-style', get_stylesheet_directory_uri() . '/assets/css/header.css', array('kazflix-child-style'), '1.0.0');
+    wp_enqueue_style('kazflix-banners-style', get_stylesheet_directory_uri() . '/assets/css/kazflix-banners.css', array('kazflix-child-style'), '1.0.0');
 
      // Enqueue slider-specific stylesheet
     wp_enqueue_style('kazflix-latest-posts-slider-style', get_stylesheet_directory_uri() . '/assets/css/kazflix-latest-posts-slider.css', array('kazflix-child-style'), '1.0.0');
