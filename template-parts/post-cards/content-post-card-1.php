@@ -1,10 +1,23 @@
-<!-- template-parts/content-post-card.php -->
+
 <div class="kazflix-post-card">
+    <!-- Ribbon Tag for posts with tags -->
+    <div class="kazflix-ribbon">
+        <!-- Fetch the first tag of the post -->
+        <?php 
+        $post_tags = get_the_tags(); 
+        if ($post_tags) {
+            echo esc_html($post_tags[0]->name);
+        }
+        ?>
+    </div>
+    
+    <!-- Post thumbnail and content -->
     <a href="<?php echo esc_url( get_permalink() ); ?>" class="kazflix-post-thumbnail">
         <?php if ( has_post_thumbnail() ) : ?>
             <?php the_post_thumbnail( 'large' ); ?>
         <?php endif; ?>
     </a>
+    
     <div class="kazflix-post-content">
         <div class="kazflix-title-link">
             <span class="kazflix-post-title"><?php the_title(); ?></span>
@@ -16,3 +29,4 @@
         </div>
     </div>
 </div>
+

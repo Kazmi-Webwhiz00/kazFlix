@@ -241,6 +241,7 @@
 
 
 /* post card */
+
 /* Post Card Container */
 .kazflix-post-card {
     flex: 1 1 auto;
@@ -253,12 +254,28 @@
     width: 100%;
     height: 100%;
 }
+/* Unique Ribbon Styling */
+.kazflix-ribbon {
+    --r: 0.4em; /* Control the ribbon shape (the radius) */
+    --c: #FA6900; /* Ribbon color */
 
-.kazflix-post-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    border-color: #6842FF;
+    position: absolute;
+    top: 20px;
+    left: calc(-1 * var(--r));
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.8;
+    padding: 0 0.5em calc(2 * var(--r));
+    border-radius: var(--r) 0 0 var(--r);
+    background: 
+        radial-gradient(100% 50% at left, var(--c) 98%, transparent 101%) 100% 0/.5em calc(100% - 2*var(--r)),
+        radial-gradient(100% 50% at right, #0005 98%, transparent 101%) 0 100%/var(--r) calc(2*var(--r)),
+        conic-gradient(from 90deg at var(--r) calc(100% - 2*var(--r)), transparent 25%, var(--c) 0) 0 0/calc(101% - .5em) 100%;
+    background-repeat: no-repeat;
 }
+
+
 
 /* Thumbnail Image */
 .kazflix-post-thumbnail img {
