@@ -61,17 +61,7 @@
 }
 
 
-/* Post Card Styles (Adaptive) */
-.kazflix-post-card {
-    flex: 1 1 auto;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    border: 2px solid #000000;
-    transition: border-color 0.3s ease;
-    width: 100%;
-    height: 100%;
-}
+
 
 .kazflix-post-card:hover {
     border-color: #6842FF;
@@ -87,55 +77,6 @@
     height: 100%;
 }
 
-/* Image Styles */
-.kazflix-post-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 8px;
-}
-
-/* Title and Description Overlay for Post Card */
-.kazflix-post-content {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.kazflix-post-card:hover .kazflix-post-content {
-    opacity: 1;
-}
-
-/* Title and Description Styles */
-.kazflix-post-title {
-    font-weight: bold;
-    margin: 0;
-    overflow: hidden;
-    white-space: normal;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.kazflix-post-description {
-    font-size: 12px;
-    margin: 5px 0 0;
-    line-height: 1.4;
-    overflow: hidden;
-    white-space: normal;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
 /* Responsive Breakpoints for kazflix-post-card-container */
 @media (min-width: 1910px) {
     .kazflix-post-card-container {
@@ -294,4 +235,88 @@
 
 .right-button {
     right: 10px;
+}
+
+
+
+
+/* post card */
+/* Post Card Container */
+.kazflix-post-card {
+    flex: 1 1 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #2c2c2c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.kazflix-post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-color: #6842FF;
+}
+
+/* Thumbnail Image */
+.kazflix-post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Content Overlay */
+.kazflix-post-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 10px;
+    border-radius: 0 0 8px 8px;
+    backdrop-filter: blur(8px) brightness(0.8);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+/* Title and Link Container with Space Between */
+.kazflix-title-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Title Styling with Truncation */
+.kazflix-post-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1; /* Allows the title to take available space */
+}
+
+/* Link Icon Styling */
+.kazflix-link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
+    background-color: #6842FF; /* Rounded background color */
+    border-radius: 50%;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.kazflix-link-icon:hover {
+    background-color: #fff;
+    color: #6842FF;
 }

@@ -16,7 +16,7 @@ get_header(); // Load the header
     <!-- Main Content Area with Post Loop -->
     <?php get_template_part( 'template-parts/banners/kazflix-wellcome-banner', 'home' ); ?>
 
-    <?php if ( false ) : ?>
+    <?php if ( wp_is_mobile() ) : ?>
         <!-- Load the mobile-specific slider for the latest posts -->
         <?php get_template_part( 'template-parts/kazflix-slider-latest-posts-mobile', 'home' ); ?>
     <?php else : ?>
