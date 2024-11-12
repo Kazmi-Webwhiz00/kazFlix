@@ -13,20 +13,25 @@ get_header(); // Load the header
 ?>
 
 <main id="content" class="kazflix-home-main">
-    <!-- Main Content Area with Post Loop -->
-    <?php get_template_part( 'template-parts/banners/kazflix-wellcome-banner', 'home' ); ?>
+    <div class="main-container">
+        <!-- Sidebar Area Wrapper -->
+        <div class="sidebar-area">
+            <?php get_template_part( 'template-parts/sidebars/sidebar-navigation-1' ); ?>
+        </div>
 
-    <?php if ( wp_is_mobile() ) : ?>
-        <!-- Load the mobile-specific slider for the latest posts -->
-        <?php get_template_part( 'template-parts/kazflix-slider-latest-posts-mobile', 'home' ); ?>
-    <?php else : ?>
-        <!-- Load the desktop-specific slider for the latest posts -->
-        <?php get_template_part( 'template-parts/kazflix-slider-latest-posts', 'home' ); ?>
-    <?php endif; ?>
-   
-    <?php get_template_part( 'template-parts/kazflix-slider-category-posts', 'home' ); ?>
+        <!-- Main Content Area with Post Loop -->
+        <div class="content-area">
+            <?php get_template_part( 'template-parts/banners/kazflix-wellcome-banner', 'home' ); ?>
+
+            <?php if ( wp_is_mobile() ) : ?>
+                <!-- Load the mobile-specific slider for the latest posts -->
+                <?php get_template_part( 'template-parts/kazflix-slider-latest-posts-mobile', 'home' ); ?>
+            <?php else : ?>
+                <!-- Load the desktop-specific slider for the latest posts -->
+                <?php get_template_part( 'template-parts/kazflix-slider-latest-posts', 'home' ); ?>
+            <?php endif; ?>
+
+            <?php get_template_part( 'template-parts/kazflix-slider-category-posts', 'home' ); ?>
+        </div>
+    </div>
 </main>
-
-<?php
-get_footer(); // Load the footer
-?>

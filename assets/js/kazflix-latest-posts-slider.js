@@ -44,3 +44,41 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollToSlide(activeIndex); // Ensure we stay on the correct slide after resizing
     });
 });
+
+// Select elements
+const scrollContainer = document.getElementById('kazflixCarousel');
+const scrollLeftButton = document.getElementById('kazflix-scroll-left');
+const scrollRightButton = document.getElementById('kazflix-scroll-right');
+
+// Set scroll amount
+const scrollAmount = 300; // Adjust this value as needed for each scroll step
+
+// Scroll left
+scrollLeftButton.addEventListener('click', () => {
+    alert("hello");
+    scrollContainer.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+    });
+});
+
+// Scroll right
+scrollRightButton.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+});
+
+// Optional: Show/hide buttons based on scroll position
+function toggleScrollButtons() {
+    const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    scrollLeftButton.style.display = scrollContainer.scrollLeft > 0 ? 'block' : 'none';
+    scrollRightButton.style.display = scrollContainer.scrollLeft < maxScrollLeft ? 'block' : 'none';
+}
+
+// Initialize button visibility
+toggleScrollButtons();
+
+// Update button visibility on scroll
+scrollContainer.addEventListener('scroll', toggleScrollButtons);

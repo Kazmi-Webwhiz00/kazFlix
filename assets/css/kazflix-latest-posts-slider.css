@@ -28,7 +28,7 @@
 /* Horizontal Layout for Mixed Posts */
 .kazflix-mixed-layout-horizontal {
     display: inline-flex;
-    gap: 4px;
+    gap: 6px;
     white-space: nowrap;
 }
 
@@ -72,7 +72,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 4px;
+    gap: 6px;
     width: 100%;
     height: 100%;
 }
