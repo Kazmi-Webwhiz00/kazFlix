@@ -30,7 +30,7 @@ body {
 
 /* Sidebar Area Wrapper */
 .sidebar-area {
-    width: 220px;
+    max-width: 220px;
     flex-shrink: 0;
     background-color: #0c0d14;
     height: calc(100vh - 70px); /* Full height minus header */
@@ -71,6 +71,9 @@ body {
 
 @media (max-width: 430px) {
     .sidebar-area {
-        display: none; /* Hide sidebar on very small screens */
+        max-width: 100%;
     }
+ .sidebar-navigation{
+    padding: 0px;
+ }
 }

@@ -1,14 +1,15 @@
 /* Sidebar Navigation */
 .sidebar-navigation {
-    width: 220px; /* Reduced width */
-    height: 100vh; /* Full height to enable independent scrolling */
+    width: 220px;
+    height: 100vh;
     background-color: #121212;
     color: #ffffff;
     padding: 20px;
-    overflow-y: auto; /* Enables scrolling within the sidebar */
-    border-right: 1px solid #2c2c2c; /* Border-right for separation */
+    overflow-y: auto;
+    border-right: 1px solid #2c2c2c;
     font-style: normal;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    position: relative;
 }
 
 /* Hide scrollbar for Webkit (Chrome, Safari) */
@@ -34,8 +35,6 @@
     align-items: center;
     font-size: 14px;
     font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
     transition: background 0.2s;
 }
 
@@ -43,7 +42,6 @@
     background-color: #1e1e1e;
 }
 
-/* Icon Styling */
 .sidebar-menu a i {
     display: inline-block;
     width: 24px;
@@ -54,14 +52,69 @@
     line-height: 24px;
 }
 
-/* Divider Styling */
 .sidebar-menu hr {
     border: none;
     border-top: 1px solid #2c2c2c;
     margin: 15px 0;
 }
 
+/* Search Container for Mobile */
+.search-container {
+    display: none; /* Hidden by default */
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+.search-container .back-button {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container .icon-back::before {
+    content: '🔙';
+    margin-right: 5px;
+}
+
+.search-container .search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    background-color: #2e2e4e;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-container .search-bar i {
+    font-size: 16px;
+    color: #aaa;
+    margin-right: 8px;
+}
+
+.search-container .search-bar input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    width: 100%;
+}
+
+.search-container .search-bar input::placeholder {
+    color: #aaa;
+}
+
 /* Icon Content */
+.icon-back::before { content: '🔙'; }
+.icon-search::before { content: '🔍'; }
 .icon-home::before { content: '🏠'; }
 .icon-recent::before { content: '🕒'; }
 .icon-new::before { content: '✨'; }
@@ -84,3 +137,47 @@
 .icon-escape::before { content: '🚪'; }
 .icon-flash::before { content: '⚡'; }
 .icon-fps::before { content: '🔫'; }
+.icon-horror::before { content: '👻'; }
+.icon-io::before { content: '🌐'; }
+.icon-mahjong::before { content: '🀄'; }
+
+@media (max-width: 1024px) {
+    /* Hide text and show only icons for sidebar links */
+    .sidebar-navigation {
+        width: 70px; /* Reduced width for icons only */
+    }
+
+    .sidebar-menu a span {
+        display: none; /* Hide the text label */
+    }
+
+    /* Center align icon in the sidebar menu */
+    .sidebar-menu a i {
+        margin-right: 0; /* Remove margin when text is hidden */
+    }
+}
+/* Mobile View Adjustments */
+@media (max-width: 430px) {
+    /* Show the search container and sidebar menu only */
+    .sidebar-navigation {
+        width: 100%; /* Full width on mobile */
+        height: 100vh; /* Full height on mobile */
+        border-right: none;
+    }
+
+    .sidebar-menu a span,
+    .search-container {
+        display: flex; /* Show search and back button */
+    }
+
+    /* Hide header and content area on mobile */
+    .kazflix-site-header,
+    .content-area {
+        display: none !important;
+    }
+
+    /* Adjust sidebar menu */
+    .sidebar-menu {
+        margin-top: 20px;
+    }
+}
