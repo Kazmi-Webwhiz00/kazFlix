@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <aside class="sidebar-navigation">
     <!-- Mobile Search and Back Button -->
     <div class="search-container">
-        <button class="back-button"><i class="icon-back"></i> <span>Back</span></button>
+        <button class="back-button" id="kazflix-side-bar-back-button"><i class="icon-back"></i> <span>Back</span></button>
         <div class="search-bar">
             <i class="icon-search"></i>
             <input type="text" placeholder="Search">

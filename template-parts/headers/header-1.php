@@ -1,13 +1,13 @@
 <header class="kazflix-site-header">
     <div class="kazflix-header-left">
-        <span class="kazflix-menu-icon">
+        <span class="kazflix-menu-icon" id="kazflix-side-bar-toogle">
             <svg viewBox="0 0 24 24" height="25" fill="#fff" aria-hidden="true" class="css-6qu7l6"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M21 4a1 1 0 1 0 0-2H5a1 1 0 0 0 0 2zM3.53 16.044l5.113-3.196a1 1 0 0 0 0-1.696L3.53 7.956A1 1 0 0 0 2 8.804v6.392a1 1 0 0 0 1.53.848M21 13a1 1 0 1 0 0-2h-8a1 1 0 1 0 0 2zm1 8a1 1 0 0 1-1 1H5a1 1 0 1 1 0-2h16a1 1 0 0 1 1 1"/></svg>
         </span>
         <a href="<?php echo esc_url(home_url('/')); ?>" class="kazflix-site-logo">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/kazflix-logo.png" alt="KazFlix Logo">
             <span>crazy games</span>
         </a>
-        <span class="kazflix-menu-icon kazflix-mobile-search-icon">
+        <span class="kazflix-menu-icon kazflix-mobile-search-icon" id="kazflix-side-bar-toogle-mobile">
         <svg  height="25" fill="#fff"  viewBox="0 0 24 24" aria-hidden="true" class="css-6qu7l6"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.55 4.333a5.958 5.958 0 1 0 0 11.917 5.958 5.958 0 0 0 0-11.917m-8.125 5.959a8.125 8.125 0 1 1 14.586 4.928l6.764 6.764a1.083 1.083 0 1 1-1.532 1.532l-6.765-6.764a8.125 8.125 0 0 1-13.053-6.46M20.842 6.5a1.083 1.083 0 0 0 0 2.167h2.167a1.083 1.083 0 0 0 0-2.167zm-3.25-3.25c0-.598.485-1.083 1.083-1.083h4.334a1.083 1.083 0 0 1 0 2.166h-4.334a1.083 1.083 0 0 1-1.083-1.083m4.333 7.583a1.083 1.083 0 1 0 0 2.167h1.084a1.083 1.083 0 1 0 0-2.167z"/></svg>
         </span>
     </div>

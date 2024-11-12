@@ -169,13 +169,6 @@
     .search-container {
         display: flex; /* Show search and back button */
     }
-
-    /* Hide header and content area on mobile */
-    .kazflix-site-header,
-    .content-area {
-        display: none !important;
-    }
-
     /* Adjust sidebar menu */
     .sidebar-menu {
         margin-top: 20px;

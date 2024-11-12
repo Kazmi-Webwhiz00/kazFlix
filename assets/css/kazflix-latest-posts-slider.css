@@ -1,7 +1,7 @@
 /* Scrollable Wrapper */
 .kazflix-scroll-wrapper {
     overflow-x: auto;
-    padding: 10px 10px;
+    padding: 10px 16px;
     white-space: nowrap;
     /* Hide scrollbar for all browsers */
     scrollbar-width: none; /* Firefox */
@@ -13,7 +13,7 @@
 }
 
 .kazflix-titleContainer {
-    padding-left: 8px;
+    padding-left: 16px;
     color: white;
 }
 
@@ -23,6 +23,7 @@
     padding-bottom: 3px;
     font-size: 1.2rem;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 /* Horizontal Layout for Mixed Posts */
@@ -211,9 +212,16 @@
     align-items: center;
 }
 
+.kazflix-scroll-wrapper:hover .kazflix-scroll-button {
+    opacity: 1;
+    visibility: visible;
+}
+
 .kazflix-scroll-button {
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    top: 50%;
+    top: 49%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
@@ -222,22 +230,24 @@
     font-size: 24px;
     cursor: pointer;
     z-index: 10;
-    transition: background-color 0.3s ease;
+    transition: opacity 0.5s ease, background-color 0.5s ease; /* Smooth transition */
+    height: calc(100% - 25px);
+    width: 60px;
 }
 
+
+.kazflix-scroll-button:focus,
 .kazflix-scroll-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.863);
 }
 
 .left-button {
-    left: 10px;
+    left: 0px;
 }
 
 .right-button {
-    right: 10px;
+    right: 0px;
 }
-
-
 
 
 /* post card */

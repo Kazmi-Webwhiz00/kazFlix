@@ -32,6 +32,12 @@ get_header(); // Load the header
             <?php endif; ?>
 
             <?php get_template_part( 'template-parts/kazflix-slider-category-posts', 'home' ); ?>
+            <div class="kazflix-footer-content">
+            <!-- Additional footer content can go here, like copyright or social links -->
+
+            <!-- Include the kazflix-footer-1.php template -->
+            <?php get_template_part('template-parts/footers/kazflix-footer-1'); ?>
+        </div>
         </div>
     </div>
 </main>

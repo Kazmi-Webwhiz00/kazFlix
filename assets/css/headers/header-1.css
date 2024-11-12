@@ -54,10 +54,6 @@
     transition: background-color 0.3s ease;
 }
 
-.kazflix-menu-icon:hover {
-    background-color: #3a3a5c;
-}
-
 /* Search bar styling */
 .kazflix-search-bar-container {
     gap: 5px;

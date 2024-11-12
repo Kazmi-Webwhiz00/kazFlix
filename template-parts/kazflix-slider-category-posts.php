@@ -29,6 +29,7 @@ if ( ! empty( $categories ) ) :
                 <span class="kazflix-carouselTitle"><?php echo esc_html( $category->name ); ?></span>
             </div>
             <div class="kazflix-scroll-wrapper">
+                <!-- <button class="kazflix-scroll-button left-button"  id="kazflix-scroll-left">‹</button> -->
                 <div class="kazflix-mixed-layout-horizontal">
                     <?php
                     // Check if it's the second category
@@ -41,6 +42,7 @@ if ( ! empty( $categories ) ) :
                         </div>
                     <?php endwhile; ?>
                 </div>
+                <!-- <button class="kazflix-scroll-button right-button" id="kazflix-scroll-right">›</button> -->
             </div>
             <?php wp_reset_postdata(); ?>
 
