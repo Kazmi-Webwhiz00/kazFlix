@@ -17,7 +17,7 @@
     </div>
 
     <div class="kazflix-post-details-container-single-post-1">
-        Post Details Content
+    <?php get_template_part('template-parts/single-post/templates-parts-single-post-1/kazflix-post-details-section'); ?>
     </div>
 
     </div>
