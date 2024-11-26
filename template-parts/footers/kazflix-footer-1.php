@@ -4,7 +4,7 @@
 
 <div class="kazflix-footer-buttons">
     <button id="kazflix-random-post-button" class="kazflix-footer-button kazflix-random-game-button">
-        <i class="fas fa-dice"></i> Random game
+        <i class="fas fa-dice"></i> Random Post
     </button>
     <button id="kazflix-back-to-top-button" class="kazflix-footer-button kazflix-back-to-top-button">
         <i class="fas fa-arrow-up"></i> Back to top
