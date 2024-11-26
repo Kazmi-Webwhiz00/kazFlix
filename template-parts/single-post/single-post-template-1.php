@@ -27,7 +27,7 @@
     </div>
 
     <div class="kazflix-footer-single-post-1">
-    Footer Content
+    <?php get_template_part('template-parts/single-post/templates-parts-single-post-1/kazflix-footer-latest-posts'); ?>
     </div>
 
 </div>
