@@ -9,8 +9,12 @@ jQuery(document).ready(function($) {
     });
 
     $('#kazflix-back-to-top-button').on('click', function() {
-        $('html, body').animate({ scrollTop: 0 }, 'smooth'); // You can replace 'smooth' with a duration like 500 (ms)
+
+        const mainContent = $('.content-area'); // Select your main content div
+        mainContent.animate({ scrollTop: 0 }, 500); // Animate scrolling within this div
     });
+    
+    
     
 // Scroll right
 $('.kazflix-scroll-button.right-button').on('click', function () {
