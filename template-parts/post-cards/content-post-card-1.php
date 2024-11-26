@@ -1,15 +1,20 @@
 
 <div class="kazflix-post-card">
-    <!-- Ribbon Tag for posts with tags -->
-    <div class="kazflix-ribbon">
-        <!-- Fetch the first tag of the post -->
-        <?php 
-        $post_tags = get_the_tags(); 
-        if ($post_tags) {
-            echo esc_html($post_tags[0]->name);
-        }
-        ?>
-    </div>
+    <?php
+    // Fetch meta values
+    $post_id = get_the_ID();
+    $is_banner_enabled = get_post_meta( $post_id, 'kazflix_banner_enabled', true );
+    $banner_name = get_post_meta( $post_id, 'kazflix_banner_name', true );
+    $banner_bg_color = get_post_meta( $post_id, 'kazflix_banner_bg_color', true );
+    $banner_text_color = get_post_meta( $post_id, 'kazflix_banner_text_color', true );
+
+    // Conditionally render the ribbon
+    if ( $is_banner_enabled === '1' && ! empty( $banner_name ) ) : ?>
+        <div class="kazflix-ribbon" style="--c: <?php echo esc_attr( $banner_bg_color ); ?>; color: <?php echo esc_attr( $banner_text_color ); ?>;">
+            <?php echo esc_html( $banner_name ); ?>
+        </div>
+    <?php endif; ?>
+
     
     <!-- Post thumbnail and content -->
     <a href="<?php echo esc_url( get_permalink() ); ?>" class="kazflix-post-thumbnail">
