@@ -27,6 +27,9 @@ if ( ! empty( $categories ) ) :
         if ( $query->have_posts() ) : ?>
             <div class="kazflix-titleContainer">
                 <span class="kazflix-carouselTitle"><?php echo esc_html( $category->name ); ?></span>
+                <a href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>" class="kazflix-seeMore">
+                    <?php esc_html_e( 'View More', 'kazflix' ); ?>
+                </a>
             </div>
             <div class="kazflix-scroll-wrapper">
                 <!-- <button class="kazflix-scroll-button left-button"  id="kazflix-scroll-left">‹</button> -->

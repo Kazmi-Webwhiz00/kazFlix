@@ -357,3 +357,16 @@
     background-color: #fff;
     color: #6842FF;
 }
+
+
+.kazflix-seeMore {
+    font-size: 12px;
+    color: #A48EFF; /* Adjust as needed */
+    text-decoration: none;
+    margin-left: 2px;
+}
+
+.kazflix-seeMore:hover {
+    text-decoration: none;
+    color: #6842ff;
+}
