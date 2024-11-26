@@ -11,8 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<main id="content" class="kazflix-category-main">
-    <div class="container">
+<main id="content" class="kazflix-home-main">
+    <div class="main-container">
+        <!-- Sidebar Area Wrapper -->
+        <div class="sidebar-area">
+            <?php get_template_part( 'template-parts/sidebars/sidebar-navigation-1' ); ?>
+        </div>
+        <div>
         <!-- Category Title -->
         <header class="kazflix-category-header-1">
             <h1 class="kazflix-category-title-1"><?php single_cat_title(); ?></h1>
@@ -42,6 +47,7 @@ get_header(); ?>
                         'next_text' => __( 'Next »', 'kazflix' ),
                     ) ); ?>
                 </div>
+                    </div>
     </div>
 </main>
 

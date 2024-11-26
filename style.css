@@ -56,20 +56,7 @@ body {
     display: none;
 }
 
-/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
-    .main-container {
-        flex-direction: column; /* Stack sidebar and content vertically */
-    }
-    .sidebar-area {
-        width: 100%; /* Sidebar takes full width on small screens */
-    }
-    .content-area {
-        width: 100%; /* Content takes full width on small screens */
-    }
-}
-
-@media (max-width: 430px) {
     .sidebar-area {
         display: none;
         max-width: 100%;
