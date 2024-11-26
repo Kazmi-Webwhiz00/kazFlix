@@ -1,0 +1,201 @@
+/* Sidebar Navigation */
+.sidebar-navigation {
+    width: 220px;
+    height: 100vh;
+    color: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #2c2c2c;
+    font-style: normal;
+    scrollbar-width: none;
+    position: relative;
+}
+
+/* Hide scrollbar for Webkit (Chrome, Safari) */
+.sidebar-navigation::-webkit-scrollbar {
+    display: none;
+}
+
+/* Sidebar Menu Styling */
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.sidebar-menu a span {
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease; /* Smooth transition for color and position */
+}
+
+.sidebar-menu a:hover span {
+    color: #b3b3b3; /* Light gray color */
+    transform: translateX(8px); /* Move text slightly forward */
+}
+
+.sidebar-menu a i {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 24px;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.sidebar-menu hr {
+    border: none;
+    border-top: 1px solid #2c2c2c;
+    margin: 15px 0;
+}
+
+/* Search Container for Mobile */
+.search-container {
+    display: none;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%; /* Full width */
+}
+
+/* Back Button Styling */
+.search-container .back-button {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.search-container .back-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #AAADBE; /* Set color for back arrow */
+}
+
+/* Search Bar Styling */
+.search-container .search-bar {
+    display: flex;
+    background-color: #373952;
+    align-items: center;
+    flex-grow: 1;
+    border-radius: 25px;
+    padding: 0px 15px;
+    border: 2px solid #00000000;
+    width: 100%;
+}
+
+.search-container .search-bar:hover,
+.search-container .search-bar:focus-within {
+        border-color: #84a9ff; /* Light blue border on hover/focus */
+        box-shadow: 0 0 8px rgba(132, 169, 255, 0.247); /* Enhanced shadow on focus */
+    }
+.search-container .search-bar svg {
+    width: 24px;
+    height: 24px;
+    fill: #AAADBE; /* Set color for search icon */
+    margin-right: 8px;
+}
+
+.search-container .search-bar input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.search-container .search-bar input::placeholder {
+    color: #b3b3b3;
+    font-size: 16px;
+}
+
+
+/* Icon Content */
+.icon-back::before { content: '🔙'; }
+.icon-search::before { content: '🔍'; }
+.icon-home::before { content: '🏠'; }
+.icon-recent::before { content: '🕒'; }
+.icon-new::before { content: '✨'; }
+.icon-trending::before { content: '🔥'; }
+.icon-updated::before { content: '🔄'; }
+.icon-originals::before { content: '🎮'; }
+.icon-two-player::before { content: '👥'; }
+.icon-action::before { content: '⚔️'; }
+.icon-adventure::before { content: '🏔️'; }
+.icon-basketball::before { content: '🏀'; }
+.icon-beauty::before { content: '🌸'; }
+.icon-bike::before { content: '🚴'; }
+.icon-car::before { content: '🚗'; }
+.icon-card::before { content: '🃏'; }
+.icon-casual::before { content: '👕'; }
+.icon-clicker::before { content: '🖱️'; }
+.icon-controller::before { content: '🎮'; }
+.icon-dress-up::before { content: '👗'; }
+.icon-driving::before { content: '🚗'; }
+.icon-escape::before { content: '🚪'; }
+.icon-flash::before { content: '⚡'; }
+.icon-fps::before { content: '🔫'; }
+.icon-horror::before { content: '👻'; }
+.icon-io::before { content: '🌐'; }
+.icon-mahjong::before { content: '🀄'; }
+
+@media (max-width: 1024px) {
+    /* Hide text and show only icons for sidebar links */
+
+    .sidebar-navigation {
+        width: 70px; /* Reduced width for icons only */
+    }
+
+    .sidebar-menu a span {
+        display: none; /* Hide the text label */
+    }
+
+    /* Center align icon in the sidebar menu */
+    .sidebar-menu a i {
+        margin-right: 0; /* Remove margin when text is hidden */
+    }
+}
+/* Mobile View Adjustments */
+@media (max-width: 430px) {
+    /* Show the search container and sidebar menu only */
+    .sidebar-navigation {
+        width: 100%; /* Full width on mobile */
+        height: 100vh; /* Full height on mobile */
+        border-right: none;
+    }
+
+    .sidebar-menu a span,
+    .search-container {
+        display: flex; /* Show search and back button */
+    }
+    /* Adjust sidebar menu */
+    .sidebar-menu {
+        margin-top: 20px;
+    }
+}

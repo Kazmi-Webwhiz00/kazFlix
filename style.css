@@ -9,3 +9,72 @@ Version: 1.0.0
 */
 
 /* Add your custom CSS below this line */
+
+/* Testing style */
+body {
+    background-color: #0c0d14 !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - 70px); /* Full viewport height minus header height */
+    overflow: hidden; /* Prevents body scroll */
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Sidebar Area Wrapper */
+.sidebar-area {
+    max-width: 220px;
+    flex-shrink: 0;
+    background-color: #0c0d14;
+    height: calc(100vh - 70px); /* Full height minus header */
+    overflow: hidden; /* Allow vertical scrolling */
+    border-right: 1px solid #2c2c2c;
+    box-sizing: border-box;
+}
+
+.sidebar-navigation {
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Content Area */
+.content-area {
+    flex-grow: 1;
+    overflow-y: auto; /* Independent scrolling */
+    box-sizing: border-box;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.content-area::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+    .sidebar-area {
+        width: 100%; /* Sidebar takes full width on small screens */
+    }
+    .content-area {
+        width: 100%; /* Content takes full width on small screens */
+    }
+}
+
+@media (max-width: 430px) {
+    .sidebar-area {
+        display: none;
+        max-width: 100%;
+    }
+ .sidebar-navigation{
+    padding: 0px;
+ }
+}

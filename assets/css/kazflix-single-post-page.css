@@ -1,0 +1,253 @@
+.kazflix-main-container-post-1 {
+    padding: 10px 100px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #0c0d14;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+
+  .kazflix-left-side-bar-single-post-1 {
+    min-height: 200px;
+    min-width: 150px;
+    width: 15%; /* Updated to 15% */
+    box-sizing: border-box;
+    margin: 10px 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  .kazflix-right-side-bar-single-post-1 {
+    min-height: 200px;
+    min-width: 150px;
+    width: 30%; /* Updated to 30% */
+    box-sizing: border-box;
+    margin: 10px 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  .kazflix-post-content-container-single-post-1 {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(55% - 20px); /* Remaining space: 55% (100% - 15% - 30%) minus margin */
+    min-width: 300px;
+    display: flex;
+    flex-direction: column; /* Ensure inner content flows vertically */
+  }
+  
+  .kazflix-post-content-inner-container-post-1 {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .kazflix-ads-banner-middle-area-single-post-1 {
+    background-color: #FFFFFF; /* White */
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .kazflix-post-details-container-single-post-1 {
+    background-color: #0000FF; /* Blue */
+    padding: 20px;
+    color: #FFFFFF;
+    margin: 20px 0;
+  }
+  
+  .kazflix-footer-single-post-1 {
+    background-color: #ff2fff; /* Pink */
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media screen and (max-width: 800px) {
+    .kazflix-main-container-post-1 {
+      padding: 5px;
+      flex-direction: column;
+    }
+  
+    .kazflix-left-side-bar-single-post-1,
+    .kazflix-right-side-bar-single-post-1 {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .kazflix-post-content-container-single-post-1 {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+
+
+  /* Left side bar */
+
+
+  /* Container for the sidebar post list */
+.kazflix-left-side-bar-post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between cards */
+    padding: 10px;
+    width: 100%;
+    max-width: 250px; /* Control the width of the sidebar */
+    color: #fff; /* White text */
+    overflow: auto; /* Allow scrolling if too many cards */
+  }
+  
+  /* Each post card container */
+  .kazflix-left-side-card-container-post-1 {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintain a card aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #00000000;
+  }
+  
+  /* Add hover effects */
+  .kazflix-left-side-card-container-post-1:hover {
+    border: 1px solid #6842ff;
+  }
+
+
+/* Right Sidebar Container */
+.kazflix-right-side-bar-container-single-post-1 {
+    width: 100%;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Ads Banner */
+#kazflix-ads-banner-1-right-area-single-post-1 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#kazflix-ads-banner-1-right-area-single-post-1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Right Sidebar Post List */
+#kazflix-right-side-bar-post-list-single-post-1 {
+    display: flex;
+    flex-wrap: wrap; /* Allow posts to wrap into rows */
+    gap: 5px; /* Spacing between cards */
+    justify-content: start; /* Space out rows */
+}
+
+/* Each Post Card in Right Sidebar */
+.kazflix-right-side-card-container-post-1 {
+    border: 1px solid #44444400;
+    border-radius: 10px;
+    width: calc(50% - 5px);
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add hover effects */
+.kazflix-right-side-card-container-post-1:hover {
+  border: 1px solid #6842ff;
+}
+  
+  /* Responsive Design for smaller screens */
+@media screen and (max-width: 1000px) {
+    .kazflix-right-side-bar-single-post-1,
+    .kazflix-left-side-bar-single-post-1{
+      display: none;
+    }
+  
+    .kazflix-post-content-container-single-post-1 {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+
+
+
+
+  /* inner contetn area */
+  .kazflix-inner-content-area-single-post-1 {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff; /* White text color */
+}
+
+.kazflix-inner-title-single-post-1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff; /* White text color */
+    text-align: start;
+}
+
+.kazflix-inner-author-details-single-post-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.kazflix-author-thumbnail-single-post-1 {
+    border-radius: 50%; /* Circular thumbnail */
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid #444; /* Optional border */
+}
+
+.kazflix-inner-author-info {
+    font-size: 14px;
+    color: #fff; /* Light gray text for author info */
+}
+
+.kazflix-inner-author-name {
+    font-weight: bold;
+    color: #6842ff; /* Bright white for author name */
+}
+
+.kazflix-inner-post-meta-single-post-1 {
+    font-size: 14px;
+    color: #fff; /* Light gray text for metadata */
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.kazflix-inner-post-content-single-post-1 {
+    font-size: 15px;
+    color: #fff; /* White text color */
+    line-height: 1.8; /* More readable line spacing */
+    text-align: start;
+}

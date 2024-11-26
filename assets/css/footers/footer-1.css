@@ -1,0 +1,58 @@
+/* Main Footer Styles */
+#kazflix-footer {
+    background-color: #121212;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.kazflix-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kazflix-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Footer Button Styles */
+.kazflix-footer-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.kazflix-footer-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff; /* Added here to remove redundancy */
+}
+
+.kazflix-footer-button i {
+    font-size: 16px;
+}
+
+.kazflix-random-game-button {
+    background-color: transparent;
+}
+
+.kazflix-back-to-top-button {
+    background-color: #6e42fb;
+    border: none;
+}
+
+.kazflix-footer-button:hover {
+    opacity: 0.8;
+}

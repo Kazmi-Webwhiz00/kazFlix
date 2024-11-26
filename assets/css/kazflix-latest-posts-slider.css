@@ -1,0 +1,421 @@
+/* Scrollable Wrapper */
+.kazflix-scroll-wrapper {
+    overflow-x: auto;
+    padding: 10px 16px;
+    white-space: nowrap;
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.kazflix-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.kazflix-titleContainer {
+    padding-left: 16px;
+    color: white;
+}
+
+.kazflix-carouselTitle {
+    align-self: flex-end;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* Horizontal Layout for Mixed Posts */
+.kazflix-mixed-layout-horizontal {
+    display: inline-flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+/* Main Container for Individual Post Cards */
+.kazflix-post-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc((100vw - 76px) / 3.1);
+    height: calc(((((100vw - 76px) / 3.1) - 4px) * 0.5617977528089888) + 4px);
+    flex-direction: column;
+}
+
+.kazflix-post-card-container-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc((100vw - 76px) / 7.25);
+    height: calc(((((100vw - 76px) / 7.25) - 4px) * 0.5617977528089888) + 4px);
+    flex-direction: column;
+}
+
+.kazflix-post-card-container-category-short {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc((100vw - 216px) / 7.25);
+    height: calc(((100vw - 216px) / 7.25 - 4px) * 1.5 + 4px);
+    flex-direction: column;
+}
+
+
+
+
+.kazflix-post-card:hover {
+    border-color: #6842FF;
+}
+
+/* Small Post Group as 2x2 Grid */
+.kazflix-small-post-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+/* Responsive Breakpoints for kazflix-post-card-container */
+@media (min-width: 1910px) {
+    .kazflix-post-card-container {
+        width: calc((104vw) / 3.6);
+        height: calc((((104vw) / 3.6 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw) / 7.25);
+        height: calc(((((100vw) / 7.25) - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category-short {
+        width: calc((100vw - 216px) / 7.25);
+        height: calc(((((100vw - 216px) / 7.25) - 4px) * 1.5) + 4px);
+    }
+}
+
+@media (min-width: 1700px) and (max-width: 1909px) {
+    .kazflix-post-card-container {
+        width: calc((104vw) / 3.6);
+        height: calc((((104vw) / 3.6 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw) / 7.25);
+        height: calc(((((100vw) / 7.25) - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category-short {
+        width: calc((100vw - 76px) / 7.25);
+        height: calc(((((100vw - 76px) / 7.25) - 4px) * 1.5) + 4px);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1699px) {
+    .kazflix-post-card-container {
+        width: calc((104vw) / 3.1);
+        height: calc((((104vw) / 3.1 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw) / 6.25);
+        height: calc(((((100vw) / 6.25) - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category-short {
+        width: calc((100vw - 76px) / 6.25);
+        height: calc(((((100vw - 76px) / 6.25) - 4px) * 1.5) + 4px);
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .kazflix-post-card-container {
+        width: calc((104vw) / 2.6);
+        height: calc((((104vw) / 2.6 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw) / 5.25);
+        height: calc(((((100vw) / 5.25) - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category-short {
+        width: calc((100vw) / 5.25);
+        height: calc(((((100vw) / 5.25) - 4px) * 1.5) + 4px);
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    .kazflix-post-card-container {
+        width: calc((104vw) / 2.1);
+        height: calc((((104vw) / 2.1 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((100vw) / 4.25);
+        height: calc(((((100vw) / 4.25) - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category-short {
+        width: calc((100vw) / 4.25);
+        height: calc(((((100vw) / 4.25) - 4px) * 1.5) + 4px);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    .kazflix-post-card-container {
+        width: calc((104vw) / 1.6);
+        height: calc((((104vw) / 1.6 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((120vw) / 3.25);
+        height: calc(((((120vw) / 3.25) - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category-short {
+        width: calc((100vw) / 3.25);
+        height: calc(((((100vw) / 3.25) - 4px) * 1.5) + 4px);
+    }
+}
+
+@media (max-width: 599px) {
+    .kazflix-post-card-container {
+        width: calc((104vw) / 1.1);
+        height: calc((((104vw) / 1.1 - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category {
+        width: calc((130vw) / 2.25);
+        height: calc(((((130vw) / 2.25) - 4px) * 0.5617977528089888) + 4px);
+    }
+
+    .kazflix-post-card-container-category-short {
+        width: calc((110vw) / 2.25);
+        height: calc(((((110vw) / 2.25) - 4px) * 1.5) + 4px);
+    }
+
+    .kazflix-welcome-item,
+    .kazflix-feature-item:nth-last-of-type(1),
+    .kazflix-feature-item:nth-last-of-type(2) {
+        display: none;
+    }
+}
+
+
+
+.kazflix-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.kazflix-scroll-wrapper:hover .kazflix-scroll-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.kazflix-scroll-button {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: opacity 0.5s ease, background-color 0.5s ease; /* Smooth transition */
+    height: calc(100% - 25px);
+    width: 60px;
+}
+
+
+.kazflix-scroll-button:focus,
+.kazflix-scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.863);
+}
+
+.left-button {
+    left: 0px;
+}
+
+.right-button {
+    right: 0px;
+}
+
+
+/* post card */
+
+/* Post Card Container */
+.kazflix-post-card {
+    flex: 1 1 auto;
+    border-radius: 8px;
+   
+    position: relative;
+    border: 1px solid #2c2c2c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+/* Unique Ribbon Styling */
+.kazflix-ribbon {
+    --r: 0.4em; /* Control the ribbon shape (the radius) */
+    --c: #FA6900; /* Ribbon color */
+
+    position: absolute;
+    top: -2px;
+    left: calc(-1 * var(--r));
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.8;
+    padding: 0 0.5em calc(2 * var(--r));
+    border-radius: var(--r) 0 0 var(--r);
+    background: 
+        radial-gradient(100% 50% at left, var(--c) 98%, transparent 101%) 100% 0/.5em calc(100% - 2*var(--r)),
+        radial-gradient(100% 50% at right, #0005 98%, transparent 101%) 0 100%/var(--r) calc(2*var(--r)),
+        conic-gradient(from 90deg at var(--r) calc(100% - 2*var(--r)), transparent 25%, var(--c) 0) 0 0/calc(101% - .5em) 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Thumbnail Image */
+.kazflix-post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Content Overlay */
+.kazflix-post-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 10px;
+    border-radius: 0 0 8px 8px;
+    backdrop-filter: blur(8px) brightness(0.8);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+/* Title and Link Container with Space Between */
+.kazflix-title-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Title Styling with Multi-line Truncation */
+.kazflix-post-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+    display: -webkit-box; /* Flexible box model for truncation */
+    -webkit-line-clamp: 2; /* Limits text to 2 lines */
+    -webkit-box-orient: vertical; /* Defines box orientation */
+    line-height: 1.2em; /* Adjusts single-line height */
+    max-height: 2.4em; /* Restricts height to two lines */
+    text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+    white-space: normal; /* Ensures multi-line wrapping */
+}
+
+/* Link Icon Styling */
+.kazflix-link-icon {
+    display: none; /* Hidden by default */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    min-width: 24px;
+    min-height: 24px;
+    background-color: #6842FF; /* Rounded background color */
+    border-radius: 50%; /* Creates a circular icon */
+    color: #fff; /* Icon color */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+/* Change Link Icon Colors on Hover */
+.kazflix-link-icon:hover {
+    background-color: #fff; /* Switch background to white */
+    color: #6842FF; /* Switch text/icon color to primary */
+}
+
+
+.kazflix-link-icon:hover {
+    background-color: #fff;
+    color: #6842FF;
+}
+
+
+.kazflix-seeMore {
+    font-size: 12px;
+    color: #A48EFF; /* Adjust as needed */
+    text-decoration: none;
+    margin-left: 2px;
+}
+
+.kazflix-seeMore:hover {
+    text-decoration: none;
+    color: #6842ff;
+}
+
+
+
+/* left side bar */
+
+
+/* Container for the sidebar post list */
+.kazflix-left-side-bar-post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between cards */
+    padding: 10px;
+    width: 100%;
+    max-width: 300px; /* Control the width of the sidebar */
+    background-color: #111; /* Dark background for sidebar */
+    color: #fff; /* White text */
+    border-radius: 10px;
+    overflow: auto; /* Allow scrolling if too many cards */
+  }
+  
+  /* Each post card container */
+  .kazflix-left-side-card-container-post-1 {
+    background-color: #222; /* Slightly lighter background for cards */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintain a card aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Add hover effects */
+  .kazflix-left-side-card-container-post-1:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+  
+  /* Add styling for images or content within cards */
+  .kazflix-left-side-card-container-post-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain image proportions */
+    border-radius: 10px;
+  }
+  
