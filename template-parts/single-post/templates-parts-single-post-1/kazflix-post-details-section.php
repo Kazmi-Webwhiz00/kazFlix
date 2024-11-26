@@ -17,12 +17,11 @@
     </div>
 
     <!-- Breadcrumb Section -->
-    <div class="kazflix-breadcrumb-single-post-1">
-        <span class="breadcrumb-label">Breadcrumb:</span> 
-        <a href="/">Home</a> > 
-        <a href="/category/something">Something</a> > 
-        <a href="/category/something/adventure">Adventure</a> > 
-        Minecraft
+    <div>
+    <?php
+// Breadcrumb Section
+kazflix_display_breadcrumbs();
+?>
     </div>
 
     <!-- Tags and Categories Section -->
