@@ -11,8 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<main id="content" class="kazflix-single-main">
-    <div class="container">
+<main id="content" class="kazflix-home-main">
+    <div class="main-container">
+        <!-- Sidebar Area Wrapper -->
+        <div class="sidebar-area">
+            <?php get_template_part( 'template-parts/sidebars/sidebar-navigation-1' ); ?>
+        </div>
         <?php 
         // Ensure we're on a single post page
         if ( is_singular( 'post' ) ) {
