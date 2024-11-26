@@ -8,12 +8,24 @@
     justify-content: space-between;
   }
   
-  .kazflix-left-side-bar-single-post-1,
+
+  .kazflix-left-side-bar-single-post-1 {
+    background-color: #FFFF00; /* Yellow */
+    min-height: 200px;
+    min-width: 150px;
+    width: 15%; /* Updated to 15% */
+    box-sizing: border-box;
+    margin: 10px 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+  
   .kazflix-right-side-bar-single-post-1 {
     background-color: #FFFF00; /* Yellow */
     min-height: 200px;
     min-width: 150px;
-    width: 15%;
+    width: 30%; /* Updated to 30% */
     box-sizing: border-box;
     margin: 10px 0;
     display: flex;
@@ -27,8 +39,10 @@
     margin: 0 10px;
     padding: 20px;
     box-sizing: border-box;
-    width: 70%;
+    width: calc(55% - 20px); /* Remaining space: 55% (100% - 15% - 30%) minus margin */
     min-width: 300px;
+    display: flex;
+    flex-direction: column; /* Ensure inner content flows vertically */
   }
   
   .kazflix-post-content-inner-container-post-1 {
@@ -131,8 +145,61 @@
 
   
 
+
+/* Right Sidebar Container */
+.kazflix-right-side-bar-container-single-post-1 {
+    width: 100%;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Ads Banner */
+#kazflix-ads-banner-1-right-area-single-post-1 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#kazflix-ads-banner-1-right-area-single-post-1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Right Sidebar Post List */
+#kazflix-right-side-bar-post-list-single-post-1 {
+    display: flex;
+    flex-wrap: wrap; /* Allow posts to wrap into rows */
+    gap: 5px; /* Spacing between cards */
+    justify-content: start; /* Space out rows */
+}
+
+/* Each Post Card in Right Sidebar */
+.kazflix-right-side-card-container-post-1 {
+    border: 1px solid #44444400;
+    border-radius: 10px;
+    width: calc(50% - 5px);
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add hover effects */
+.kazflix-right-side-card-container-post-1:hover {
+  border: 1px solid #6842ff;
+}
+  
   /* Responsive Design for smaller screens */
 @media screen and (max-width: 1200px) {
+    .kazflix-right-side-bar-single-post-1,
     .kazflix-left-side-bar-single-post-1{
       display: none;
     }

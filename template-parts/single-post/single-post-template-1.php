@@ -18,7 +18,7 @@
     </div>
 
     <div class="kazflix-right-side-bar-single-post-1">
-    Right Sidebar
+    <?php get_template_part('template-parts/single-post/templates-parts-single-post-1/single-post-1-right-side-bar'); ?>
     </div>
 
     <div class="kazflix-footer-single-post-1">
