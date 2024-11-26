@@ -13,9 +13,12 @@
     background-color: #FFFF00; /* Yellow */
     min-height: 200px;
     min-width: 150px;
-    width: 20%;
+    width: 15%;
     box-sizing: border-box;
     margin: 10px 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
   }
   
   .kazflix-post-content-container-single-post-1 {
@@ -24,6 +27,7 @@
     margin: 0 10px;
     padding: 20px;
     box-sizing: border-box;
+    width: 70%;
     min-width: 300px;
   }
   
@@ -83,6 +87,50 @@
   }
   
 
+
+  /* Left side bar */
+
+
+  /* Container for the sidebar post list */
+.kazflix-left-side-bar-post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between cards */
+    padding: 10px;
+    width: 100%;
+    max-width: 250px; /* Control the width of the sidebar */
+    color: #fff; /* White text */
+    overflow: auto; /* Allow scrolling if too many cards */
+  }
+  
+  /* Each post card container */
+  .kazflix-left-side-card-container-post-1 {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintain a card aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Add hover effects */
+  .kazflix-left-side-card-container-post-1:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+  
+  /* Add styling for images or content within cards */
+  .kazflix-left-side-card-container-post-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain image proportions */
+    border-radius: 10px;
+  }
+
+  
+
   /* Responsive Design for smaller screens */
 @media screen and (max-width: 1200px) {
     .kazflix-left-side-bar-single-post-1{
@@ -94,3 +142,6 @@
       margin: 0;
     }
   }
+
+
+

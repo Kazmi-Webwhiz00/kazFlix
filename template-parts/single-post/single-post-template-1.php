@@ -2,7 +2,7 @@
 <div class="kazflix-main-container-post-1">
 
     <div class="kazflix-left-side-bar-single-post-1">
-    Left Sidebar
+    <?php get_template_part('template-parts/single-post/templates-parts-single-post-1/single-post-1-left-side-bar'); ?>
     </div>
 
     <div class="kazflix-post-content-container-single-post-1">
