@@ -2,6 +2,8 @@
 
 require_once get_stylesheet_directory() . '/inc/meta-fields.php';
 require_once get_stylesheet_directory() . '/inc/category-images.php';
+require_once get_stylesheet_directory() . '/inc/settings/customizer.php';
+
 
 
 
