@@ -83,3 +83,13 @@
     justify-content: center;
     align-items: center;
 }
+
+
+/* Mobile Styling for Multi-line Truncation */
+@media (max-width: 768px) {
+    .kazflix-post-title {
+        -webkit-line-clamp: 4; /* Limits text to 4 lines */
+        max-height: 4.8em; /* Restricts height to four lines */
+        font-size: 12px;
+    }
+}

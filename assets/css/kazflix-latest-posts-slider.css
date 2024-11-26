@@ -318,30 +318,41 @@
     width: 100%;
 }
 
-/* Title Styling with Truncation */
+/* Title Styling with Multi-line Truncation */
 .kazflix-post-title {
     font-size: 0.9rem;
     font-weight: bold;
     margin: 0;
     color: #fff;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    flex: 1; /* Allows the title to take available space */
+    display: -webkit-box; /* Flexible box model for truncation */
+    -webkit-line-clamp: 2; /* Limits text to 2 lines */
+    -webkit-box-orient: vertical; /* Defines box orientation */
+    line-height: 1.2em; /* Adjusts single-line height */
+    max-height: 2.4em; /* Restricts height to two lines */
+    text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+    white-space: normal; /* Ensures multi-line wrapping */
 }
 
 /* Link Icon Styling */
 .kazflix-link-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none; /* Hidden by default */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
     min-width: 24px;
     min-height: 24px;
     background-color: #6842FF; /* Rounded background color */
-    border-radius: 50%;
-    color: #fff;
-    transition: background-color 0.3s ease;
+    border-radius: 50%; /* Creates a circular icon */
+    color: #fff; /* Icon color */
+    transition: background-color 0.3s ease; /* Smooth background color change */
 }
+
+/* Change Link Icon Colors on Hover */
+.kazflix-link-icon:hover {
+    background-color: #fff; /* Switch background to white */
+    color: #6842FF; /* Switch text/icon color to primary */
+}
+
 
 .kazflix-link-icon:hover {
     background-color: #fff;
