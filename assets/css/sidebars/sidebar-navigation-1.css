@@ -2,7 +2,6 @@
 .sidebar-navigation {
     width: 220px;
     height: 100vh;
-    background-color: #121212;
     color: #ffffff;
     padding: 20px;
     overflow-y: auto;
@@ -38,16 +37,28 @@
     transition: background 0.2s;
 }
 
-.sidebar-menu a:hover {
-    background-color: #1e1e1e;
+.sidebar-menu a span {
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease; /* Smooth transition for color and position */
+}
+
+.sidebar-menu a:hover span {
+    color: #b3b3b3; /* Light gray color */
+    transform: translateX(8px); /* Move text slightly forward */
 }
 
 .sidebar-menu a i {
     display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 24px;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    display: inline-block;
     width: 24px;
     height: 24px;
-    margin-right: 10px;
-    font-size: 18px;
     text-align: center;
     line-height: 24px;
 }
@@ -60,43 +71,53 @@
 
 /* Search Container for Mobile */
 .search-container {
-    display: none; /* Hidden by default */
-    flex-direction: row;
+    display: none;
     align-items: center;
     margin-bottom: 15px;
-    padding: 10px;
-    background-color: #1e1e1e;
-    border-radius: 8px;
+    width: 100%; /* Full width */
 }
 
+/* Back Button Styling */
 .search-container .back-button {
     display: flex;
     align-items: center;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 10px;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
+    outline: none;
 }
 
-.search-container .icon-back::before {
-    content: '🔙';
-    margin-right: 5px;
+.search-container .back-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #AAADBE; /* Set color for back arrow */
 }
 
+/* Search Bar Styling */
 .search-container .search-bar {
     display: flex;
+    background-color: #373952;
     align-items: center;
     flex-grow: 1;
-    background-color: #2e2e4e;
-    border-radius: 20px;
-    padding: 5px 10px;
+    border-radius: 25px;
+    padding: 0px 15px;
+    border: 2px solid #00000000;
+    width: 100%;
 }
 
-.search-container .search-bar i {
-    font-size: 16px;
-    color: #aaa;
+.search-container .search-bar:hover,
+.search-container .search-bar:focus-within {
+        border-color: #84a9ff; /* Light blue border on hover/focus */
+        box-shadow: 0 0 8px rgba(132, 169, 255, 0.247); /* Enhanced shadow on focus */
+    }
+.search-container .search-bar svg {
+    width: 24px;
+    height: 24px;
+    fill: #AAADBE; /* Set color for search icon */
     margin-right: 8px;
 }
 
@@ -106,11 +127,14 @@
     color: #ffffff;
     outline: none;
     width: 100%;
+    font-size: 16px;
 }
 
 .search-container .search-bar input::placeholder {
-    color: #aaa;
+    color: #b3b3b3;
+    font-size: 16px;
 }
+
 
 /* Icon Content */
 .icon-back::before { content: '🔙'; }
@@ -143,6 +167,7 @@
 
 @media (max-width: 1024px) {
     /* Hide text and show only icons for sidebar links */
+
     .sidebar-navigation {
         width: 70px; /* Reduced width for icons only */
     }

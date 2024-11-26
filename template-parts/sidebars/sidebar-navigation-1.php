@@ -13,12 +13,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 <aside class="sidebar-navigation">
     <!-- Mobile Search and Back Button -->
     <div class="search-container">
-        <button class="back-button" id="kazflix-side-bar-back-button"><i class="icon-back"></i> <span>Back</span></button>
+        <button class="back-button" id="kazflix-side-bar-back-button">
+            <!-- Back Button SVG Icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#AAADBE" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
         <div class="search-bar">
-            <i class="icon-search"></i>
+            <!-- Search SVG Icon -->
+            <svg fill="#AAADBE" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39M11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7"/>
+            </svg>
             <input type="text" placeholder="Search">
         </div>
-    </div>
+</div>
 
     <nav>
         <ul class="sidebar-menu">

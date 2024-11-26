@@ -1,4 +1,9 @@
 <?php
+
+require_once get_stylesheet_directory() . '/inc/meta-fields.php';
+
+
+
 function kazflix_enqueue_styles() {
     // Enqueue jQuery (default with WordPress)
     wp_enqueue_script('jquery');

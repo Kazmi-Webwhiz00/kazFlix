@@ -40,7 +40,9 @@ if ( $query->have_posts() ) : ?>
 
                     <?php if ($post_index % 5 > 0 && $post_index % 5 < 5): ?>
                         <!-- Post Card within Small Group -->
+                        <div class="kazflix-post-card-container-category">
                         <?php get_template_part( 'template-parts/post-cards/content', 'post-card-1' ); ?>
+                    </div>
                     <?php endif; ?>
 
                     <?php if ($post_index % 5 === 4): ?>

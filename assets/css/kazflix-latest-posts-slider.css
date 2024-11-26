@@ -29,7 +29,7 @@
 /* Horizontal Layout for Mixed Posts */
 .kazflix-mixed-layout-horizontal {
     display: inline-flex;
-    gap: 6px;
+    gap: 8px;
     white-space: nowrap;
 }
 
@@ -73,7 +73,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 6px;
+    gap: 8px;
     width: 100%;
     height: 100%;
 }
@@ -256,7 +256,7 @@
 .kazflix-post-card {
     flex: 1 1 auto;
     border-radius: 8px;
-    overflow: hidden;
+   
     position: relative;
     border: 1px solid #2c2c2c;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -270,7 +270,7 @@
     --c: #FA6900; /* Ribbon color */
 
     position: absolute;
-    top: 20px;
+    top: -2px;
     left: calc(-1 * var(--r));
     font-size: 14px;
     font-weight: bold;
