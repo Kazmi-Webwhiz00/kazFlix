@@ -20,6 +20,7 @@ function kazflix_enqueue_styles() {
     wp_enqueue_style('kazflix-footer-1-style', get_stylesheet_directory_uri() . '/assets/css/footers/footer-1.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('kazflix-banners-style', get_stylesheet_directory_uri() . '/assets/css/banners/kazflix-wellcome-banner.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('kazflix-side-bar-style-1', get_stylesheet_directory_uri() . '/assets/css/sidebars/sidebar-navigation-1.css', array('kazflix-child-style'), '1.0.0');
+    wp_enqueue_style('kazflix-category-style-1', get_stylesheet_directory_uri() . '/assets/css/kazflix-category-page.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('custom-google-fonts', 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap', false);
     wp_enqueue_style('kazflix-latest-posts-slider-style', get_stylesheet_directory_uri() . '/assets/css/kazflix-latest-posts-slider.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('kazflix-latest-posts-slider-style-mobile', get_stylesheet_directory_uri() . '/assets/css/kazflix-latest-posts-slider-mobile.css', array('kazflix-child-style'), '1.0.0');

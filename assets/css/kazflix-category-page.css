@@ -1,0 +1,53 @@
+.kazflix-category-header-1 {
+    text-align: center;
+    padding: 100px;
+    background: linear-gradient(to bottom, #4b2a94, #0C0D14);
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.kazflix-category-title-1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.kazflix-category-description-1 {
+    font-size: 1rem;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Updated CSS */
+.kazflix-category-1-post-card-container {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.kazflix-category-posts-container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 100px;
+}
+
+/* Media Query for screens below 767px */
+@media screen and (max-width: 767px) {
+    .kazflix-category-header-1 {
+        padding: 50px;
+    }
+    .kazflix-category-posts-container-1 {
+        padding: 10px; /* Adjusted padding for smaller screens */
+        gap: 5px;
+    }
+
+    .kazflix-category-1-post-card-container {
+        max-width: 130px; /* Adjusted max-width */
+        max-height: 130px; /* Adjusted max-height */
+    }
+}
