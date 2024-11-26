@@ -1,6 +1,8 @@
 <?php
 
 require_once get_stylesheet_directory() . '/inc/meta-fields.php';
+require_once get_stylesheet_directory() . '/inc/category-images.php';
+
 
 
 
@@ -34,3 +36,11 @@ function kazflix_enqueue_styles() {
     wp_enqueue_script('kazflix-scroll-js', get_stylesheet_directory_uri() . '/assets/js/kazflix-latest-posts-slider.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'kazflix_enqueue_styles');
+
+
+function theme_enqueue_media_uploader() {
+    if (is_admin()) {
+        wp_enqueue_media();
+    }
+}
+add_action('admin_enqueue_scripts', 'theme_enqueue_media_uploader');
