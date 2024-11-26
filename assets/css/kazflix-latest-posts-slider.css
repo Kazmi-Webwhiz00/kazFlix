@@ -77,17 +77,16 @@
     width: 100%;
     height: 100%;
 }
-
 /* Responsive Breakpoints for kazflix-post-card-container */
 @media (min-width: 1910px) {
     .kazflix-post-card-container {
-        width: calc((100vw - 216px) / 3.6);
-        height: calc((((100vw - 216px) / 3.6 - 4px) * 0.5617977528089888) + 4px);
+        width: calc((104vw) / 3.6);
+        height: calc((((104vw) / 3.6 - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category {
-        width: calc((100vw - 216px) / 7.25);
-        height: calc(((((100vw - 216px) / 7.25) - 4px) * 0.5617977528089888) + 4px);
+        width: calc((100vw) / 7.25);
+        height: calc(((((100vw) / 7.25) - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category-short {
@@ -98,13 +97,13 @@
 
 @media (min-width: 1700px) and (max-width: 1909px) {
     .kazflix-post-card-container {
-        width: calc((100vw - 76px) / 3.6);
-        height: calc((((100vw - 76px) / 3.6 - 4px) * 0.5617977528089888) + 4px);
+        width: calc((104vw) / 3.6);
+        height: calc((((104vw) / 3.6 - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category {
-        width: calc((100vw - 76px) / 7.25);
-        height: calc(((((100vw - 76px) / 7.25) - 4px) * 0.5617977528089888) + 4px);
+        width: calc((100vw) / 7.25);
+        height: calc(((((100vw) / 7.25) - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category-short {
@@ -115,13 +114,13 @@
 
 @media (min-width: 1200px) and (max-width: 1699px) {
     .kazflix-post-card-container {
-        width: calc((100vw - 76px) / 3.1);
-        height: calc((((100vw - 76px) / 3.1 - 4px) * 0.5617977528089888) + 4px);
+        width: calc((104vw) / 3.1);
+        height: calc((((104vw) / 3.1 - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category {
-        width: calc((100vw - 76px) / 6.25);
-        height: calc(((((100vw - 76px) / 6.25) - 4px) * 0.5617977528089888) + 4px);
+        width: calc((100vw) / 6.25);
+        height: calc(((((100vw) / 6.25) - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category-short {
@@ -132,69 +131,69 @@
 
 @media (min-width: 1000px) and (max-width: 1199px) {
     .kazflix-post-card-container {
-        width: calc((100vw - 76px) / 2.6);
-        height: calc((((100vw - 76px) / 2.6 - 4px) * 0.5617977528089888) + 4px);
+        width: calc((104vw) / 2.6);
+        height: calc((((104vw) / 2.6 - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category {
-        width: calc((100vw - 76px) / 5.25);
-        height: calc(((((100vw - 76px) / 5.25) - 4px) * 0.5617977528089888) + 4px);
+        width: calc((100vw) / 5.25);
+        height: calc(((((100vw) / 5.25) - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category-short {
-        width: calc((100vw - 76px) / 5.25);
-        height: calc(((((100vw - 76px) / 5.25) - 4px) * 1.5) + 4px);
+        width: calc((100vw) / 5.25);
+        height: calc(((((100vw) / 5.25) - 4px) * 1.5) + 4px);
     }
 }
 
 @media (min-width: 800px) and (max-width: 999px) {
     .kazflix-post-card-container {
-        width: calc((100vw - 76px) / 2.1);
-        height: calc((((100vw - 76px) / 2.1 - 4px) * 0.5617977528089888) + 4px);
+        width: calc((104vw) / 2.1);
+        height: calc((((104vw) / 2.1 - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category {
-        width: calc((100vw - 76px) / 4.25);
-        height: calc(((((100vw - 76px) / 4.25) - 4px) * 0.5617977528089888) + 4px);
+        width: calc((100vw) / 4.25);
+        height: calc(((((100vw) / 4.25) - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category-short {
-        width: calc((100vw - 76px) / 4.25);
-        height: calc(((((100vw - 76px) / 4.25) - 4px) * 1.5) + 4px);
+        width: calc((100vw) / 4.25);
+        height: calc(((((100vw) / 4.25) - 4px) * 1.5) + 4px);
     }
 }
 
 @media (min-width: 600px) and (max-width: 799px) {
     .kazflix-post-card-container {
-        width: calc((100vw - 76px) / 1.6);
-        height: calc((((100vw - 76px) / 1.6 - 4px) * 0.5617977528089888) + 4px);
+        width: calc((104vw) / 1.6);
+        height: calc((((104vw) / 1.6 - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category {
-        width: calc((100vw - 76px) / 3.25);
-        height: calc(((((100vw - 76px) / 3.25) - 4px) * 0.5617977528089888) + 4px);
+        width: calc((120vw) / 3.25);
+        height: calc(((((120vw) / 3.25) - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category-short {
-        width: calc((100vw - 76px) / 3.25);
-        height: calc(((((100vw - 76px) / 3.25) - 4px) * 1.5) + 4px);
+        width: calc((100vw) / 3.25);
+        height: calc(((((100vw) / 3.25) - 4px) * 1.5) + 4px);
     }
 }
 
 @media (max-width: 599px) {
     .kazflix-post-card-container {
-        width: calc((100vw - 76px) / 1.1);
-        height: calc((((100vw - 76px) / 1.1 - 4px) * 0.5617977528089888) + 4px);
+        width: calc((104vw) / 1.1);
+        height: calc((((104vw) / 1.1 - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category {
-        width: calc((100vw - 76px) / 2.25);
-        height: calc(((((100vw - 76px) / 2.25) - 4px) * 0.5617977528089888) + 4px);
+        width: calc((130vw) / 2.25);
+        height: calc(((((130vw) / 2.25) - 4px) * 0.5617977528089888) + 4px);
     }
 
     .kazflix-post-card-container-category-short {
-        width: calc((100vw - 76px) / 2.25);
-        height: calc(((((100vw - 76px) / 2.25) - 4px) * 1.5) + 4px);
+        width: calc((110vw) / 2.25);
+        height: calc(((((110vw) / 2.25) - 4px) * 1.5) + 4px);
     }
 
     .kazflix-welcome-item,
