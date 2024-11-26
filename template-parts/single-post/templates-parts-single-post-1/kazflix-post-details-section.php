@@ -24,4 +24,25 @@
         <a href="/category/something/adventure">Adventure</a> > 
         Minecraft
     </div>
+
+    <!-- Tags and Categories Section -->
+    <div class="kazflix-tags-categories-single-post-1">
+        <?php
+        // Fetch and display all categories
+        $all_categories = get_categories();
+        if ($all_categories) {
+            foreach ($all_categories as $category) {
+                echo '<a href="' . esc_url(get_category_link($category->term_id)) . '" class="kazflix-tag-button-single-post-1">' . esc_html($category->name) . '</a>';
+            }
+        }
+
+        // Fetch and display all tags
+        $all_tags = get_tags();
+        if ($all_tags) {
+            foreach ($all_tags as $tag) {
+                echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '" class="kazflix-tag-button-single-post-1">' . esc_html($tag->name) . '</a>';
+            }
+        }
+        ?>
+    </div>
 </div>

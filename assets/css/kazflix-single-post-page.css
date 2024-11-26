@@ -310,7 +310,7 @@
 
 /* Share Button */
 .kazflix-share-button-single-post-1 {
-  background-color: #4e4eaa; /* Cool-toned purple */
+  background-color: #373952; /* Cool-toned purple */
   border: none;
   color: #fff;
   border-radius: 20px;
@@ -323,8 +323,7 @@
 }
 
 .kazflix-share-button-single-post-1:hover {
-  background-color: #5e5ebb; /* Lighter purple on hover */
-  transform: scale(1.05);
+  background-color: rgb(71, 71, 150); /* Lighter purple on hover */
 }
 
 /* Subscription Form */
@@ -425,7 +424,7 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #1e1e1e;
+  background-color: #13141E;
   border-radius: 12px;
 }
 
@@ -455,4 +454,31 @@
 .kazflix-breadcrumb-single-post-1 a:hover {
   text-decoration: underline;
   color: #8564ff; /* Slightly lighter purple */
+}
+
+
+/* Tags and Categories Section */
+.kazflix-tags-categories-single-post-1 {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kazflix-tag-button-single-post-1 {
+  background-color: #373952; /* Matches overall theme */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.kazflix-tag-button-single-post-1:hover{
+  background-color: rgb(71, 71, 150);
+  color: #fff;
 }
