@@ -12,7 +12,8 @@
     </div>
 
     <div class="kazflix-ads-banner-middle-area-single-post-1">
-        Ad Banner
+       <!-- Add your banner image or code here -->
+       <img src="https://via.placeholder.com/700x100" alt="Advertisement">
     </div>
 
     <div class="kazflix-post-details-container-single-post-1">
