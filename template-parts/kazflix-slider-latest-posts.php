@@ -6,12 +6,12 @@
  */
 
 // Number of posts to display
-$post_count = 20; // Adjust as needed
+$home_slider_post_count = get_theme_mod( 'kazflix_home_slider_post_count', 15 ); 
 
 // Query for latest posts
 $args = array(
     'post_type'      => 'post',
-    'posts_per_page' => $post_count,
+    'posts_per_page' => $home_slider_post_count,
 );
 $query = new WP_Query($args);
 

@@ -6,7 +6,7 @@
  */
 
 // Limit of posts per category
-$posts_per_category = 15;
+$category_slider_post_count = get_theme_mod( 'kazflix_category_slider_post_count', 15 );
 
 // Get all categories
 $categories = get_categories();
@@ -19,7 +19,7 @@ if ( ! empty( $categories ) ) :
         // Query for latest posts in each category
         $args = array(
             'post_type'      => 'post',
-            'posts_per_page' => $posts_per_category,
+            'posts_per_page' => $category_slider_post_count,
             'category__in'   => array( $category->term_id ),
         );
         $query = new WP_Query( $args );

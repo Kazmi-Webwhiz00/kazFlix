@@ -6,9 +6,12 @@
  */
 
 // Query for up to 15 posts
+
+$home_slider_post_count = get_theme_mod( 'kazflix_home_slider_post_count', 15 ); 
+
 $args = array(
     'post_type'      => 'post',
-    'posts_per_page' => 15,
+    'posts_per_page' => $home_slider_post_count,
 );
 $query = new WP_Query($args);
 
