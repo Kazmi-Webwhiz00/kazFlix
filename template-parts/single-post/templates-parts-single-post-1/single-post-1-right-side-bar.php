@@ -10,7 +10,7 @@
     <!-- Ads Banner -->
     <div id="kazflix-ads-banner-1-right-area-single-post-1" class="kazflix-ads-banner-single-post-1">
         <!-- Add your banner image or code here -->
-        <img src="https://via.placeholder.com/200x300" alt="Advertisement">
+        <img src="https://via.placeholder.com/200x400" alt="Advertisement">
     </div>
 
     <?php

@@ -58,7 +58,6 @@
   }
   
   .kazflix-post-details-container-single-post-1 {
-    padding: 20px;
     color: #FFFFFF;
     margin: 20px 0;
   }
@@ -179,7 +178,6 @@
   
   /* Responsive Design for smaller screens */
 @media screen and (max-width: 1023px) {
-  .kazflix-footer-single-post-1,
     .kazflix-right-side-bar-single-post-1,
     .kazflix-left-side-bar-single-post-1{
       display: none;
@@ -263,14 +261,14 @@
 .kazflix-footer-posts-container-1 {
   display: flex;
   flex-wrap: wrap; /* Allow posts to wrap into rows */
-  gap: 15px; /* Space between cards */
+  gap: 16px; /* Space between cards */
   align-items: center;
   justify-content: center;
 }
 
 /* Individual Post Card in Footer */
 .kazflix-footer-1-post-card-container {
-  width: calc(15% - 5px);
+  width: calc(16% - 5px);
   height: 150px;
 }
 
@@ -281,8 +279,8 @@
   }
 
   .kazflix-footer-1-post-card-container {
-      max-width: 130px; /* Adjust max dimensions */
-      max-height: 130px;
+    width: 100%;
+      max-width: 180px; /* Adjust max dimensions */
   }
 }
 
