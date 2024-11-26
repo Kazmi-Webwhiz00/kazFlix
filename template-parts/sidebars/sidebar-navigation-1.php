@@ -8,6 +8,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
+
+// Fetch all categories with their images
+$categories = get_categories(array(
+    'hide_empty' => false, // Include all categories, even if they have no posts
+));
 ?>
 
 <aside class="sidebar-navigation">
@@ -26,33 +31,36 @@ if ( ! defined( 'ABSPATH' ) ) {
             </svg>
             <input type="text" placeholder="Search">
         </div>
-</div>
+    </div>
 
     <nav>
         <ul class="sidebar-menu">
-            <li><a href="#"><i class="icon-home"></i> <span>Home</span></a></li>
-            <li><a href="#"><i class="icon-recent"></i> <span>Recently played</span></a></li>
-            <li><a href="#"><i class="icon-new"></i> <span>New</span></a></li>
-            <li><a href="#"><i class="icon-trending"></i> <span>Trending now</span></a></li>
-            <li><a href="#"><i class="icon-updated"></i> <span>Updated</span></a></li>
-            <li><a href="#"><i class="icon-originals"></i> <span>Originals</span></a></li>
-            <hr>
-            <li><a href="#"><i class="icon-two-player"></i> <span>2 Player</span></a></li>
-            <li><a href="#"><i class="icon-action"></i> <span>Action</span></a></li>
-            <li><a href="#"><i class="icon-adventure"></i> <span>Adventure</span></a></li>
-            <li><a href="#"><i class="icon-basketball"></i> <span>Basketball</span></a></li>
-            <li><a href="#"><i class="icon-beauty"></i> <span>Beauty</span></a></li>
-            <li><a href="#"><i class="icon-bike"></i> <span>Bike</span></a></li>
-            <li><a href="#"><i class="icon-car"></i> <span>Car</span></a></li>
-            <li><a href="#"><i class="icon-card"></i> <span>Card</span></a></li>
-            <li><a href="#"><i class="icon-casual"></i> <span>Casual</span></a></li>
-            <li><a href="#"><i class="icon-clicker"></i> <span>Clicker</span></a></li>
-            <li><a href="#"><i class="icon-controller"></i> <span>Controller</span></a></li>
-            <li><a href="#"><i class="icon-dress-up"></i> <span>Dress Up</span></a></li>
-            <li><a href="#"><i class="icon-driving"></i> <span>Driving</span></a></li>
-            <li><a href="#"><i class="icon-escape"></i> <span>Escape</span></a></li>
-            <li><a href="#"><i class="icon-flash"></i> <span>Flash</span></a></li>
-            <li><a href="#"><i class="icon-fps"></i> <span>FPS</span></a></li>
+            <!-- Dynamic Categories -->
+            <?php if (!empty($categories)) : ?>
+                <?php foreach ($categories as $category) : ?>
+                    <?php
+                    $category_name = $category->name; // Get the category name
+                    $category_link = get_category_link($category->term_id); // Get the category link
+                    $category_image_id = get_term_meta($category->term_id, 'category_image_id', true); // Get the category image ID
+                    $category_image_url = $category_image_id ? wp_get_attachment_url($category_image_id) : ''; // Get the category image URL
+                    ?>
+                    <li>
+                        <a href="<?php echo esc_url($category_link); ?>">
+                            <?php if ($category_image_url) : ?>
+                                <img src="<?php echo esc_url($category_image_url); ?>" alt="<?php echo esc_attr($category_name); ?>" style="width:24px; height:24px; margin-right:8px; vertical-align:middle;">
+                            <?php else : ?>
+                                <i class="icon-default"></i> <!-- Default icon if no image -->
+                            <?php endif; ?>
+                            <span>
+    <?php echo ucfirst(strtolower(explode(' ', esc_html($category_name))[0])) . substr(esc_html($category_name), strlen(explode(' ', $category_name)[0])); ?>
+</span>
+
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <li><span>No categories found.</span></li>
+            <?php endif; ?>
         </ul>
     </nav>
 </aside>
