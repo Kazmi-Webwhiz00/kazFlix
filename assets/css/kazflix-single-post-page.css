@@ -1,0 +1,96 @@
+.kazflix-main-container-post-1 {
+    padding: 10px 100px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #eb8585;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .kazflix-left-side-bar-single-post-1,
+  .kazflix-right-side-bar-single-post-1 {
+    background-color: #FFFF00; /* Yellow */
+    min-height: 200px;
+    min-width: 150px;
+    width: 20%;
+    box-sizing: border-box;
+    margin: 10px 0;
+  }
+  
+  .kazflix-post-content-container-single-post-1 {
+    background-color: #FF0000; /* Red */
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 300px;
+  }
+  
+  .kazflix-post-content-inner-container-post-1 {
+    width: 100%;
+    background-color: #48ff00; /* Green */
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #000000;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .kazflix-ads-banner-middle-area-single-post-1 {
+    background-color: #FFFFFF; /* White */
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .kazflix-post-details-container-single-post-1 {
+    background-color: #0000FF; /* Blue */
+    padding: 20px;
+    color: #FFFFFF;
+    margin: 20px 0;
+  }
+  
+  .kazflix-footer-single-post-1 {
+    background-color: #ff2fff; /* Pink */
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media screen and (max-width: 800px) {
+    .kazflix-main-container-post-1 {
+      padding: 5px;
+      flex-direction: column;
+    }
+  
+    .kazflix-left-side-bar-single-post-1,
+    .kazflix-right-side-bar-single-post-1 {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .kazflix-post-content-container-single-post-1 {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+
+  /* Responsive Design for smaller screens */
+@media screen and (max-width: 1200px) {
+    .kazflix-left-side-bar-single-post-1{
+      display: none;
+    }
+  
+    .kazflix-post-content-container-single-post-1 {
+      width: 100%;
+      margin: 0;
+    }
+  }
