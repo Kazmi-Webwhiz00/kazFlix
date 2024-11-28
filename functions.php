@@ -19,6 +19,7 @@ function kazflix_enqueue_styles() {
 
     // Enqueue the main child theme stylesheet
     wp_enqueue_style('kazflix-child-style', get_stylesheet_directory_uri() . '/style.css', array('hello-elementor-style'), wp_get_theme()->get('Version'));
+    wp_enqueue_style('kazflix-layout-style', get_stylesheet_directory_uri() . '/layout.css', array('kazflix-child-style'), '1.0.0');
 
     // Enqueue additional stylesheets
     wp_enqueue_style('kazflix-header-style', get_stylesheet_directory_uri() . '/assets/css/header.css', array('kazflix-child-style'), '1.0.0');

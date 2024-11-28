@@ -1,6 +1,5 @@
 /*
 Theme Name: kazFlix Theme
-
 Description: A child theme for Hello Elementor
 Author: Your Name
 Author URI: 
@@ -8,60 +7,72 @@ Template: hello-elementor
 Version: 1.0.0
 */
 
-/* Add your custom CSS below this line */
+/* style.css */
+:root {
+    /* Colors */
+    --primary-color: #6842ff; /* Main brand color for primary actions and highlights */
+    --secondary-color: #2e2e4e; /* Supporting color for secondary elements and backgrounds */
+    --accent-color: #7f5ffd; /* Attention-grabbing color for links, buttons, or hover states */
+    --background-color: #0C0D14; /* Main background color for the theme */
+    --secondary-background-color: #1F2030; /* Secondary background color for contrast */
+    --text-color: #ffffff; /* Default text color for body content */
+    --secondary-text-color: #888; /* Muted text color for less important information */
 
-/* Testing style */
+    /* Typography */
+    --font-family-base: 'Nunito Sans', sans-serif; /* Base font family for general text */
+    --font-size-base: 1rem; /* Default font size (16px) */
+
+    /* Buttons and Links */
+    --button-bg-color: var(--primary-color); /* Default background color for buttons */
+    --button-text-color: #ffffff; /* Default text color for buttons */
+    --button-hover-bg-color: var(--accent-color); /* Background color for buttons on hover */
+    --button-focus-color:var(--primary-color); /* Outline or shadow color for focused buttons */
+    --link-color: var(--accent-color); /* Default color for links */
+    --link-hover-color: var(--accent-color); /* Hover color for links */
+    --link-focus-color: var(--primary-color); /* Outline or underline color for focused links */
+
+    /* Transitions */
+    --transition-duration: 0.3s; /* Default transition duration for smooth effects */
+    --transition-ease: ease-in-out; /* Easing function for transitions */
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --background-color: #1b1b1b; /* Background color for dark mode */
+    --text-color: #f4f4f4; /* Text color for dark mode */
+    --primary-color: #1e90ff; /* Primary color adjusted for dark mode contrast */
+    --button-bg-color: var(--primary-color); /* Button background color in dark mode */
+    --button-hover-bg-color: var(--accent-color); /* Button hover color in dark mode */
+    --link-color: var(--accent-color); /* Link color in dark mode */
+    --link-hover-color: #9c6dff; /* Link hover color in dark mode */
+}
+
+/* Default Body Styles */
 body {
-    background-color: #0c0d14 !important;
-    font-family: 'Nunito Sans', sans-serif !important;
-    font-weight: 600 !important;
+    background-color: var(--background-color); /* Use the background color */
+    color: var(--text-color) !important; /* Apply the default text color */
+    font-family: var(--font-family-base); /* Apply the base font family */
+    
+    transition: background-color var(--transition-duration) var(--transition-ease),
+                color var(--transition-duration) var(--transition-ease); /* Smooth transitions for theme changes */
 }
 
-/* Main Container */
-.main-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: calc(100vh - 70px); /* Full viewport height minus header height */
-    overflow: hidden; /* Prevents body scroll */
-    padding-bottom: 0;
-    margin-bottom: 0;
+button:focus {
+    outline: 2px solid var(--button-focus-color); /* Highlight border on focus */
 }
 
-/* Sidebar Area Wrapper */
-.sidebar-area {
-    max-width: 220px;
-    flex-shrink: 0;
-    background-color: #0c0d14;
-    height: calc(100vh - 70px); /* Full height minus header */
-    overflow: hidden; /* Allow vertical scrolling */
-    border-right: 1px solid #2c2c2c;
-    box-sizing: border-box;
+/* Default Link Styles */
+a {
+    color: var(--link-color); /* Default link color */
+    text-decoration: none;
+    transition: color var(--transition-duration) var(--transition-ease); /* Smooth transition for hover/focus */
 }
 
-.sidebar-navigation {
-    padding: 20px;
-    color: #ffffff;
+a:hover {
+    color: var(--link-hover-color); /* Change link color on hover */
 }
 
-/* Content Area */
-.content-area {
-    flex-grow: 1;
-    overflow-y: auto; /* Independent scrolling */
-    box-sizing: border-box;
-}
-
-/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
-.content-area::-webkit-scrollbar {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .sidebar-area {
-        display: none;
-        max-width: 100%;
-    }
- .sidebar-navigation{
-    padding: 0px;
- }
+a:focus {
+    outline: 2px solid var(--link-focus-color); /* Highlight link on focus */
+    text-decoration: underline; /* Underline link on focus for accessibility */
 }

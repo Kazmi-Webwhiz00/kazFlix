@@ -4,13 +4,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #1F2030;
-    color: #fff;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for sticky header */
-    border: 1px solid #1F2030;
+    border: 1px solid var(--secondary-background-color);
 }
 
 .kazflix-header-left,
@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .kazflix-site-logo img {
@@ -36,7 +36,7 @@
 
 .kazflix-site-logo span {
     font-size: 1rem;
-    color: #fff;
+    color: var(--text-color);
 }
 
 /* Menu icon styling */
@@ -48,7 +48,7 @@
     height: 40px;
     font-size: 1.3rem;
     border-radius: 50%;
-    color: #fff;
+    color: var(--text-color);
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
@@ -61,9 +61,9 @@
     align-items: center;
     justify-content: center;
     padding: 5px 20px;
-    border: 2px solid #2e2e4e; /* Dark border color */
+    border: 2px solid var(--secondary-color); /* Dark border color */
     border-radius: 20px;
-    background-color: #2e2e4e;
+    background-color: var(--secondary-color);
     color: #dcdcdc;
     font-size: 0.9rem;
     width: 100%;
@@ -76,7 +76,7 @@
 
 .kazflix-search-bar-container:hover,
 .kazflix-search-bar-container:focus-within {
-    border-color: #84a9ff; /* Light blue border on hover/focus */
+    border-color: var(--accent-color); /* Light blue border on hover/focus */
     box-shadow: 0 0 8px rgba(132, 169, 255, 0.247); /* Enhanced shadow on focus */
 }
 
@@ -85,7 +85,7 @@
     border: 0px !important;
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: var(--text-color);
     padding: 5px 10px;
     outline: none;
     height: 25px; /* Reduced height of input */
@@ -93,7 +93,7 @@
 
 /* White placeholder color */
 .kazflix-search-bar-container > input::placeholder {
-    color: #fff; /* White placeholder color */
+    color: var(--text-color); /* White placeholder color */
 }
 
 /* Right section icons styling */
@@ -125,9 +125,9 @@
 .kazflix-login-button {
     padding: 6px 12px;
     margin-left: 8px;
-    background-color: #6c63ff;
+    background-color: var(--primary-color);
     border: none;
-    color: #fff;
+    color: var(--text-color);
     border-radius: 20px;
     cursor: pointer;
     font-size: 16px;
@@ -136,7 +136,7 @@
 }
 
 .kazflix-login-button:hover {
-    background-color: #847aff;
+    background-color: var(--accent-color);
 }
 
 .kazflix-login-button span:nth-child(2) {

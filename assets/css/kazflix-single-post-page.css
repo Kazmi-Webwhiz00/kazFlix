@@ -1,12 +1,19 @@
 .kazflix-main-container-post-1 {
-    padding: 10px 100px;
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #0c0d14;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  padding: 10px 100px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #0c0d14;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto; /* Ensure scrolling works */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.kazflix-main-container-post-1::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and newer versions of Edge */
+}
   
 
   .kazflix-left-side-bar-single-post-1 {
@@ -74,7 +81,7 @@
   @media screen and (max-width: 800px) {
     .kazflix-main-container-post-1 {
       padding: 5px;
-      flex-direction: column;
+      flex-direction: row;
     }
   
     .kazflix-left-side-bar-single-post-1,
@@ -474,3 +481,5 @@
   background-color: rgb(71, 71, 150);
   color: #fff;
 }
+
+
