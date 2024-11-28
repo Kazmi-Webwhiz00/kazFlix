@@ -35,10 +35,13 @@ function kazflix_enqueue_styles() {
     wp_enqueue_style('kazflix-latest-posts-slider-style', get_stylesheet_directory_uri() . '/assets/css/kazflix-latest-posts-slider.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('kazflix-latest-posts-slider-style-mobile', get_stylesheet_directory_uri() . '/assets/css/kazflix-latest-posts-slider-mobile.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('post-card-css-1', get_stylesheet_directory_uri() . '/assets/css/post-card-1', array('kazflix-child-style'), '1.0.0');
+    wp_enqueue_style('post-pagination', get_stylesheet_directory_uri() . '/assets/css/pagination.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
     // Enqueue custom JavaScript with jQuery as a dependency
     wp_enqueue_script('kazflix-scroll-js', get_stylesheet_directory_uri() . '/assets/js/kazflix-latest-posts-slider.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('kazflix-pagination-js', get_stylesheet_directory_uri() . '/assets/js/kazflix-pagination.js', array('jquery'), '1.0.0', true);
+    
 }
 add_action('wp_enqueue_scripts', 'kazflix_enqueue_styles');
 
@@ -49,3 +52,26 @@ function theme_enqueue_media_uploader() {
     }
 }
 add_action('admin_enqueue_scripts', 'theme_enqueue_media_uploader');
+
+
+
+
+function kazflix_load_post_content() {
+    $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
+
+    if ($page < 1) {
+        wp_send_json_error(array('message' => 'Invalid page number.'));
+    }
+
+    global $wp_query;
+    $wp_query->set('page', $page);
+    setup_postdata($wp_query->post);
+
+    ob_start();
+    the_content(); // Capture the post content
+    $content = ob_get_clean();
+
+    wp_send_json_success(array('content' => $content));
+}
+add_action('wp_ajax_kazflix_load_post_content', 'kazflix_load_post_content');
+add_action('wp_ajax_nopriv_kazflix_load_post_content', 'kazflix_load_post_content');

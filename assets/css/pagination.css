@@ -1,0 +1,47 @@
+.kazflix-pagination-single-post-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--secondary-background-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.kazflix-pagination-arrow svg{
+    fill: var(--text-color);
+    width: 25px;
+}
+.kazflix-pagination-arrow {
+    display: flex;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color) ;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 34px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.kazflix-pagination-arrow:hover {
+    background-color: var(--accent-color);
+}
+
+.kazflix-pagination-arrow:disabled {
+    background-color: #555;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.kazflix-pagination-info {
+    color: white;
+    font-size: 18px;
+}
