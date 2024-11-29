@@ -13,7 +13,7 @@
     // Query arguments for random posts
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 10,
+        'posts_per_page' => 20,
         'orderby' => 'rand', // Random order
         'post__not_in' => array(get_the_ID()), // Exclude the current post
     );

@@ -1,3 +1,15 @@
+<?php
+/**
+ * Template part for displaying the footer with similar tagged posts
+ *
+ * @package Your_Child_Theme
+ */
+?>
+
+<div class="kz-post-details-posts-wrapper">
+    <?php get_template_part('template-parts/single-post/templates-parts-single-post-1/kazflix-post-details-post-container'); ?>
+</div>
+
 <div class="kazflix-post-details-section-single-post-1">
     <!-- Share and Subscribe Section -->
     <div class="kazflix-share-subscribe-section-single-post-1">

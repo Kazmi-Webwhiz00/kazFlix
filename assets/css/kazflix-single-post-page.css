@@ -30,7 +30,7 @@
   .kazflix-right-side-bar-single-post-1 {
     min-height: 200px;
     min-width: 150px;
-    width: 30%; /* Updated to 30% */
+    width: 25%; /* Updated to 30% */
     box-sizing: border-box;
     margin: 10px 0;
     display: flex;
@@ -43,7 +43,7 @@
     margin: 0 10px;
     padding: 20px;
     box-sizing: border-box;
-    width: calc(55% - 20px); /* Remaining space: 55% (100% - 15% - 30%) minus margin */
+    width: calc(65% - 20px); /* Remaining space: 55% (100% - 15% - 30%) minus margin */
     min-width: 300px;
     display: flex;
     flex-direction: column; /* Ensure inner content flows vertically */
@@ -75,7 +75,7 @@
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 20px;
+
   }
   
   /* Responsive Design for smaller screens */
@@ -193,6 +193,11 @@
 
 
 
+  @media screen and (max-width: 620px) {
+    .kazflix-details-posts-container-wrapper{
+      flex-wrap: wrap;
+    }
+  }
 
 
   /* inner contetn area */
@@ -520,4 +525,16 @@
   height: 400px;
   display: block; /* Ensure it's a block element */
   margin: 0 auto; /* Center it horizontally if necessary */
+}
+
+
+
+.kz-post-details-cards-container{
+  flex: 1;
+  height: 150px;
+}
+
+.kazflix-details-posts-container-wrapper {
+  display: flex;
+  gap: 8px;
 }
