@@ -57,8 +57,9 @@
   }
   
   .kazflix-ads-banner-middle-area-single-post-1 {
+    background-color: white;
     margin: 10px auto;
-    width: 100%;
+    width: auto;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
@@ -202,7 +203,7 @@
 }
 
 .kazflix-inner-title-single-post-1 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 15px;
     color: #fff; /* White text color */
@@ -277,6 +278,10 @@
 @media screen and (max-width: 767px) {
   .kazflix-footer-posts-container-1 {
       gap: 10px;
+  }
+
+  .kazflix-inner-title-single-post-1 {
+    font-size: 20px;
   }
 
   .kazflix-footer-1-post-card-container {
@@ -483,3 +488,36 @@
 }
 
 
+.kazflix-inner-content-main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.kazflix-inner-content-post-container {
+  flex: 3; /* Adjust as needed */
+}
+
+.kazflix-inner-content-ads-container {
+  height: 350px;
+  flex: 1; /* Adjust as needed */
+  background-color: #f8f8f8; /* Example background color */
+  padding: 10px;
+}
+
+/* Hide ads container on smaller screens */
+@media (max-width: 768px) {
+  .kazflix-inner-content-ads-container {
+      display: none;
+  }
+}
+
+
+
+#left-side-bar-ads-banner-1 {
+  background-color: white;
+  width: 100%;
+  height: 400px;
+  display: block; /* Ensure it's a block element */
+  margin: 0 auto; /* Center it horizontally if necessary */
+}

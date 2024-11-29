@@ -13,7 +13,7 @@
 
     <div class="kazflix-ads-banner-middle-area-single-post-1">
        <!-- Add your banner image or code here -->
-       <img src="https://via.placeholder.com/700x100" alt="Advertisement">
+       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ads-banner -2.png" alt="Advertisement">
     </div>
 
     <div class="kazflix-post-details-container-single-post-1">

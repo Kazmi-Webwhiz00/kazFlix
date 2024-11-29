@@ -26,6 +26,30 @@ if (!empty($current_post_categories)) {
 
     if ($similar_posts_query->have_posts()) : ?>
         <div class="kazflix-left-side-bar-post-list">
+            <?php 
+            $post_counter = 0; // Initialize the counter
+            while ($similar_posts_query->have_posts() && $post_counter < 2) : 
+                $similar_posts_query->the_post(); 
+                $post_counter++; // Increment the counter
+            ?>
+                <div class="kazflix-left-side-card-container-post-1">
+                    <?php get_template_part('template-parts/post-cards/content', 'post-card-1'); ?>
+                </div>
+            <?php endwhile; ?>
+
+    <?php endif; ?>
+    
+
+    <div id="left-side-bar-ads-banner-1" class="left-side-bar-ads-banner">
+    <!-- Ad content goes here -->
+     <span>Ads area</span>
+</div>
+
+    <?php 
+    
+    
+
+    if ($similar_posts_query->have_posts()) : ?>
             <?php while ($similar_posts_query->have_posts()) : $similar_posts_query->the_post(); ?>
                 <div class="kazflix-left-side-card-container-post-1">
                     <?php get_template_part('template-parts/post-cards/content', 'post-card-1'); ?>
@@ -41,3 +65,7 @@ if (!empty($current_post_categories)) {
     echo '<p>No related posts available.</p>';
 }
 ?>
+
+
+
+
