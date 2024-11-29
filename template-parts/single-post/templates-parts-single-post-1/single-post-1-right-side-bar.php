@@ -7,11 +7,7 @@
 ?>
 
 <div class="kazflix-right-side-bar-container-single-post-1">
-    <!-- Ads Banner -->
-    <div id="kazflix-ads-banner-1-right-area-single-post-1" class="kazflix-ads-banner-single-post-1">
-        <!-- Add your banner image or code here -->
-        <img src="https://via.placeholder.com/200x400" alt="Advertisement">
-    </div>
+
 
     <?php
     // Query arguments for random posts
@@ -27,17 +23,48 @@
 
     if ($random_posts_query->have_posts()) : ?>
         <div id="kazflix-right-side-bar-post-list-single-post-1" class="kazflix-right-side-bar-post-list-single-post-1">
-            <?php while ($random_posts_query->have_posts()) : $random_posts_query->the_post(); ?>
+            <?php 
+            $counter = 0; // Initialize the counter
+            while ($random_posts_query->have_posts()) : 
+                $random_posts_query->the_post(); 
+                $counter++; // Increment the counter
+                ?>
                 <div id="kazflix-right-side-card-container-post-1-<?php the_ID(); ?>" class="kazflix-right-side-card-container-post-1">
                     <?php get_template_part('template-parts/post-cards/content', 'post-card-1'); ?>
                 </div>
-            <?php endwhile; ?>
+                <?php 
+                if ($counter >= 4) break; // Stop after 4 posts
+            endwhile; 
+            ?>
         </div>
     <?php else : ?>
         <!-- Debug message if no posts found -->
         <p>No random posts found.</p>
-    <?php endif;
+    <?php endif; ?>
+    
 
+    <!-- Ads Banner -->
+    <div id="kazflix-ads-banner-1-right-area-single-post-1" class="kazflix-ads-banner-single-post-1">
+        <!-- Add your banner image or code here -->
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ads-banner -1.png" alt="Advertisement">
+    </div>
+
+    <?php 
+// Continue the loop without a counter condition
+if ($random_posts_query->have_posts()) : ?>
+    <div id="kazflix-right-side-bar-post-list-single-post-1" class="kazflix-right-side-bar-post-list-single-post-1">
+        <?php 
+        while ($random_posts_query->have_posts()) : 
+            $random_posts_query->the_post(); 
+            ?>
+            <div id="kazflix-right-side-card-container-post-1-<?php the_ID(); ?>" class="kazflix-right-side-card-container-post-1">
+                <?php get_template_part('template-parts/post-cards/content', 'post-card-1'); ?>
+            </div>
+        <?php endwhile; ?>
+    </div>
+<?php endif; ?>
+
+    <?php
     // Restore original Post Data
     wp_reset_postdata();
     ?>

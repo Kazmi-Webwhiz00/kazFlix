@@ -57,7 +57,7 @@
   }
   
   .kazflix-ads-banner-middle-area-single-post-1 {
-    margin: 20px auto;
+    margin: 10px auto;
     width: 100%;
     text-align: center;
     padding: 20px;
@@ -483,57 +483,3 @@
 }
 
 
-/* pagination desing */
-
-
-.kazflix-pagination-single-post-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  background-color: #1c1c1c;
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-
-.kazflix-pagination-single-post-1 .page-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  width: 100%;
-}
-
-.kazflix-pagination-single-post-1 .page-links .page-link {
-  padding: 10px 15px;
-  border-radius: 6px;
-  color: white;
-  text-decoration: none;
-}
-
-.kazflix-pagination-single-post-1 .page-links .page-link:hover {
-  background-color: #ffc107; /* Change color for hover effect */
-  color: #1c1c1c;
-}
-
-.kazflix-pagination-single-post-1 .page-links span:first-child {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #2a2a2a;
-  border-radius: 50%;
-  padding: 8px;
-}
-
-.kazflix-pagination-single-post-1 .page-links span:last-child {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffc107;
-  border-radius: 50%;
-  padding: 8px;
-}

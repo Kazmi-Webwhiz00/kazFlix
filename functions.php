@@ -34,8 +34,9 @@ function kazflix_enqueue_styles() {
     wp_enqueue_style('custom-google-fonts', 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap', false);
     wp_enqueue_style('kazflix-latest-posts-slider-style', get_stylesheet_directory_uri() . '/assets/css/kazflix-latest-posts-slider.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('kazflix-latest-posts-slider-style-mobile', get_stylesheet_directory_uri() . '/assets/css/kazflix-latest-posts-slider-mobile.css', array('kazflix-child-style'), '1.0.0');
-    wp_enqueue_style('post-card-css-1', get_stylesheet_directory_uri() . '/assets/css/post-card-1', array('kazflix-child-style'), '1.0.0');
+    // wp_enqueue_style('post-card-css-1', get_stylesheet_directory_uri() . '/assets/css/post-card-1', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('post-pagination', get_stylesheet_directory_uri() . '/assets/css/pagination.css', array('kazflix-child-style'), '1.0.0');
+    wp_enqueue_style('post-card-css-2', get_stylesheet_directory_uri() . '/assets/css/post-card-css-1.css', array('kazflix-child-style'), '1.0.0');
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
     // Enqueue custom JavaScript with jQuery as a dependency
